@@ -1,0 +1,89 @@
+{
+	"$schema": "https://json-schema.org/draft-07/schema",
+	"$id": "./projects.json",
+	"type": "object",
+	"title": "List of MediaWiki projects",
+	"description": "List of MediaWiki projects for use in discord-wiki-bot",
+	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "path"
+		},
+		"wikiProjects": {
+			"type": "array",
+			"description": "List of MediaWiki projects",
+			"items": {
+				"type": "object",
+				"description": "MediaWiki project",
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Hostname of the project"
+					},
+					"regex": {
+						"type": "string",
+						"description": "Regex to match the project url"
+					},
+					"articlePath": {
+						"type": "string",
+						"description": "Article path of the project"
+					},
+					"scriptPath": {
+						"type": "string",
+						"description": "Script path of the project"
+					},
+					"regexPaths": {
+						"type": "boolean",
+						"description": "Whether the paths include matches of the regex",
+						"default": false
+					},
+					"wikiFarm": {
+						"type": "string",
+						"description": "Wiki farm of the project",
+						"enum": [
+							"wikimedia",
+							"fandom",
+							"miraheze",
+							"wiki.gg"
+						]
+					},
+					"extensions": {
+						"type": "array",
+						"description": "List of extensions providing useful API endpoints",
+						"items": {
+							"type": "string",
+							"description": "Name of an extension providing useful API endpoints",
+							"enum": [
+								"CentralAuth",
+								"Cargo"
+							]
+						},
+						"default": [],
+						"additionalItems": false
+					},
+					"urlSpaceReplacement": {
+						"type": "string",
+						"description": "Replacement for spaces in the article URL",
+						"default": "_"
+					},
+					"note": {
+						"type": "string",
+						"description": "Note about the specific project"
+					}
+				},
+				"required": [
+					"name",
+					"regex",
+					"articlePath",
+					"scriptPath"
+				],
+				"additionalProperties": false
+			},
+			"additionalItems": false
+		}
+	},
+	"required": [
+		"wikiProjects"
+	],
+	"additionalProperties": false
+}
