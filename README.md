@@ -16,9 +16,11 @@
 ## How to check if a URL matches a wiki project
 
 * `name` - The hostname of the URL should match the `name`.
-* `regex` - match the URL against the regex
-* `articlePath` - Article path of the project is `https://$1` + `articlePath` + `$1`
-* `scriptPath` - Script path of the project is `https://$1` + `scriptPath`
+* `regex` - Match the URL against the regex
+  * `$1` - Hostname and path between `https://` and `articlePath` or `scriptPath`
+  * `$n` - If the hostname contains multiple wikis, additional groups are used to uniquely identify them
+* `articlePath` - Article path of the project is `https://` + `$1` + `articlePath`
+* `scriptPath` - Script path of the project is `https://` + `$1` + `scriptPath`
 * `regexPaths` - If true, `articlePath` and `scriptPath` include group matches of `regex`
 * `wikiFarm` - Name of the wiki farm the project belongs to (`wikimedia`, `fandom`, `miraheze`, `wiki.gg`)
 * `extensions` - List of extensions providing useful API endpoints (`CentralAuth`, `Cargo`)
