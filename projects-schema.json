@@ -84,7 +84,8 @@
 							"fandom",
 							"miraheze",
 							"wiki.gg"
-						]
+						],
+						"default": null
 					},
 					"extensions": {
 						"type": "array",
@@ -107,7 +108,8 @@
 					},
 					"note": {
 						"type": "string",
-						"description": "Note about the specific project"
+						"description": "Note about the specific project",
+						"default": null
 					}
 				},
 				"required": [
