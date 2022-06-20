@@ -1109,6 +1109,60 @@
 			"scriptPath": "/mediawiki/"
 		},
 		{
+			"name": "lotro-wiki.com",
+			"regex": "((?:www\\.)?lotro-wiki\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "scoutwiki.org",
+			"regex": "((?:([a-z-]{2,12})\\.)scoutwiki\\.org)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.scoutwiki.org/"
+				]
+			}
+		},
+		{
+			"name": "wiki.archlinux.org",
+			"regex": "(wiki\\.archlinux\\.org)",
+			"articlePath": "/title/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "dandwiki.com",
+			"regex": "((?:www\\.)?dandwiki.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "vikidia.org",
+			"regex": "((?:([a-z-]{2,12})\\.)vikidia\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.vikidia.org/w/"
+				]
+			}
+		},
+		{
+			"name": "scratch-wiki.info",
+			"regex": "((?:([a-z-]{2,12})\\.)scratch-wiki\\.info)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.scratch-wiki.info/w/"
+				]
+			}
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
