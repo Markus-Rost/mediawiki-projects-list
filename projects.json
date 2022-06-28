@@ -205,7 +205,7 @@
 			"idString": {
 				"regex": "((?:[a-z-]{2,12}\\.)?[a-z\\d-]{1,50})",
 				"scriptPaths": [
-					"https://$2.wiki.gg/",
+					"https://$1.wiki.gg/",
 					"https://$2.wiki.gg/$1/"
 				]
 			},
