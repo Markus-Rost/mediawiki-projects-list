@@ -1163,6 +1163,30 @@
 			}
 		},
 		{
+			"name": "wiki.hypixel.net",
+			"regex": "(wiki\\.hypixel\\.net)",
+			"articlePath": "/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "wiki.serenesforest.net",
+			"regex": "(wiki\\.serenesforest\\.net)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "wiki.seiwanetwork.org",
+			"regex": "(wiki\\.seiwanetwork\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "hiddenpalace.org",
+			"regex": "((?:www\\.)?hiddenpalace\\.org)",
+			"articlePath": "/",
+			"scriptPath": "/w/"
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
