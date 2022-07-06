@@ -285,7 +285,8 @@
 				"scriptPaths": [
 					"https://$1.brickimedia.org/w/"
 				]
-			}
+			},
+			"wikiFarm": "shoutwiki"
 		},
 		{
 			"name": "wiki.openstreetmap.org",
@@ -315,7 +316,10 @@
 			"name": "pcgamingwiki.com",
 			"regex": "((?:www\\.)?pcgamingwiki.com)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/w/"
+			"scriptPath": "/w/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "metin2.gameforge.com",
@@ -394,7 +398,10 @@
 			"name": "gbf.wiki",
 			"regex": "((?:www\\.)?gbf\\.wiki)",
 			"articlePath": "/",
-			"scriptPath": "/"
+			"scriptPath": "/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "wiki.albiononline.com",
@@ -406,13 +413,16 @@
 			"name": "atitd.wiki",
 			"regex": "((?:www\\.)?atitd\\.wiki)",
 			"articlePath": "/tale10/",
-			"scriptPath": "/tale10/w/"
+			"scriptPath": "/tale10/w/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
-			"name": "atitd.wiki",
-			"regex": "((?:www\\.)?atitd\\.wiki)",
-			"articlePath": "/tale10/",
-			"scriptPath": "/tale10/w/"
+			"name": "ffxiv.consolegameswiki.com",
+			"regex": "(ffxiv\\.consolegameswiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/mediawiki/"
 		},
 		{
 			"name": "niwanetwork.org",
@@ -484,7 +494,10 @@
 			"name": "dragalialost.wiki",
 			"regex": "((?:www\\.)?dragalialost\\.wiki)",
 			"articlePath": "/w/",
-			"scriptPath": "/"
+			"scriptPath": "/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "dragon-quest.org",
@@ -502,7 +515,10 @@
 			"name": "fireemblemwiki.org",
 			"regex": "((?:www\\.)?fireemblemwiki\\.org)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/w/"
+			"scriptPath": "/w/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "mutecity.org",
@@ -532,7 +548,10 @@
 				"scriptPaths": [
 					"https://$1.splatoonwiki.org/w/"
 				]
-			}
+			},
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "starfoxwiki.info",
@@ -550,7 +569,10 @@
 			"name": "nookipedia.com",
 			"regex": "((?:www\\.)?nookipedia\\.com)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/w/"
+			"scriptPath": "/w/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "pikminwiki.com",
@@ -950,7 +972,10 @@
 			"name": "segaretro.org",
 			"regex": "((?:www\\.)?segaretro\\.org)",
 			"articlePath": "/",
-			"scriptPath": "/"
+			"scriptPath": "/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "necretro.org",
@@ -1274,7 +1299,7 @@
 		},
 		{
 			"name": "playstationdev.wiki",
-			"regex": "(playstationdev\.wiki)/([a-z0-9]{1,50})",
+			"regex": "(playstationdev\\.wiki)/([a-z0-9]{1,50})",
 			"articlePath": "/$2/index.php/",
 			"scriptPath": "/$2/",
 			"idString": {
@@ -1302,6 +1327,24 @@
 			"regex": "((?:www\\.)?wavu\\.wiki)",
 			"articlePath": "/t/",
 			"scriptPath": "/"
+		},
+		{
+			"name": "blazblue.wiki",
+			"regex": "((?:www\\.)?blazblue\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"extensions": [
+				"Cargo"
+			]
+		},
+		{
+			"name": "archives.org.au",
+			"regex": "((?:www\\.)?archives\\.org.au)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "liquipedia.net",
