@@ -1187,6 +1187,123 @@
 			"scriptPath": "/w/"
 		},
 		{
+			"name": "developer.valvesoftware.com",
+			"regex": "(developer\\.valvesoftware\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "pixelmonmod.com",
+			"regex": "((?:www\\.)?pixelmonmod\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "dmowiki.com",
+			"regex": "((?:www\\.)?dmowiki\\.com)",
+			"articlePath": "/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "awoiaf.westeros.org",
+			"regex": "(awoiaf\\.westeros\\.org)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "westeros.ir",
+			"regex": "((?:www\\.)?westeros\\.ir)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "lagardedenuit.com",
+			"regex": "((?:www\\.)?lagardedenuit\\.com)",
+			"articlePath": "/wiki/index.php?title=",
+			"scriptPath": "/wiki/"
+		},
+		{
+			"name": "7kingdoms.ru",
+			"regex": "((?:www\\.)?7kingdoms\\.ru)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "wiki.geloefogo.com",
+			"regex": "(wiki\\.geloefogo\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "huijiwiki.com",
+			"regex": "((?:([a-z\\d-]{1,50})\\.)?(?:www\\.)?huijiwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.huijiwiki.com/",
+				]
+			},
+			"wikiFarm": "huijiwiki"
+		},
+		{
+			"name": "chocolate-doom.org",
+			"regex": "((?:www\\.)?chocolate-doom\\.org)",
+			"articlePath": "/wiki/index.php/",
+			"scriptPath": "/wiki/"
+		},
+		{
+			"name": "glitchcity.wiki",
+			"regex": "((?:www\\.)?glitchcity\\.wiki)",
+			"articlePath": "/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "shoutwiki.com",
+			"regex": "((?:([a-z\\d-]{1,50})\\.)?(?:www\\.)?shoutwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.shoutwiki.com/",
+				]
+			},
+			"wikiFarm": "shoutwiki"
+		},
+		{
+			"name": "playstationdev.wiki",
+			"regex": "(playstationdev\.wiki)/([a-z0-9]{1,50})",
+			"articlePath": "/$2/index.php/",
+			"scriptPath": "/$2/",
+			"idString": {
+				"regex": "([a-z0-9]{1,50})",
+				"scriptPaths": [
+					"https://playstationdev.wiki/$1/"
+				]
+			},
+			"regexPaths": true
+		},
+		{
+			"name": "wiki.raregamingdump.ca",
+			"regex": "(wiki\\.raregamingdump\\.ca)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "sttwiki.org",
+			"regex": "((?:www\\.)?sttwiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "wavu.wiki",
+			"regex": "((?:www\\.)?wavu\\.wiki)",
+			"articlePath": "/t/",
+			"scriptPath": "/"
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
