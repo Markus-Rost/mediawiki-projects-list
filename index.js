@@ -13,7 +13,7 @@ const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = r
  * @property {string} idString.regex - Regex to match the id string
  * @property {string[]} idString.scriptPaths - How to turn the group matches of the id string regex into an URL to the script path, index based on group matches
  * @property {boolean} regexPaths - Whether the paths include matches of the regex
- * @property {?("wikimedia"|"fandom"|"miraheze"|"wiki.gg")} wikiFarm - Wiki farm of the project
+ * @property {?("wikimedia"|"fandom"|"miraheze"|"wiki.gg"|"biligame"|"huijiwiki"|"shoutwiki")} wikiFarm - Wiki farm of the project
  * @property {("CentralAuth"|"Cargo")[]} extensions - List of extensions providing useful API endpoints
  * @property {string} urlSpaceReplacement - Replacement for spaces in the article URL
  * @property {?string} note - Note about the specific project
