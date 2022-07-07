@@ -83,7 +83,10 @@
 							"wikimedia",
 							"fandom",
 							"miraheze",
-							"wiki.gg"
+							"wiki.gg",
+							"biligame",
+							"huijiwiki",
+							"shoutwiki"
 						],
 						"default": null
 					},
@@ -120,6 +123,7 @@
 				],
 				"additionalProperties": false
 			},
+			"uniqueItemProperties": ["name"],
 			"additionalItems": false
 		}
 	},
