@@ -1344,12 +1344,18 @@
 		},
 		{
 			"name": "archives.org.au",
-			"regex": "((?:www\\.)?archives\\.org.au)",
+			"regex": "((?:www\\.)?archives\\.org\\.au)",
 			"articlePath": "/",
 			"scriptPath": "/",
 			"extensions": [
 				"Cargo"
 			]
+		},
+		{
+			"name": "dragon-mania-legends.wiki",
+			"regex": "((?:www\\.)?dragon-mania-legends\\.wiki)",
+			"articlePath": "/",
+			"scriptPath": "/"
 		},
 		{
 			"name": "liquipedia.net",
