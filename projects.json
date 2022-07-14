@@ -1358,6 +1358,24 @@
 			"scriptPath": "/"
 		},
 		{
+			"name": "wiki.guildwars.com",
+			"regex": "(wiki\\.guildwars\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "ashesofcreation.wiki",
+			"regex": "((?:www\\.)?ashesofcreation\\.wiki)",
+			"articlePath": "/",
+			"scriptPath": "/"
+		},
+		{
+			"name": "drawntolife.wiki",
+			"regex": "((?:www\\.)?drawntolife\\.wiki)",
+			"articlePath": "/en/",
+			"scriptPath": "/w/"
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
