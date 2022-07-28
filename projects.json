@@ -421,7 +421,7 @@
 		},
 		{
 			"name": "consolegameswiki.com",
-			"regex": "(?:ffxiv\\.)?consolegameswiki\\.com)",
+			"regex": "((?:ffxiv\\.)?consolegameswiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/mediawiki/"
 		},
