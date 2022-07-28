@@ -1364,6 +1364,30 @@
 			"scriptPath": "/"
 		},
 		{
+			"name": "guildwiki.de",
+			"regex": "((?:www\\.)?guildwiki\\.de)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/gwiki/"
+		},
+		{
+			"name": "gwiki.fr",
+			"regex": "((?:www\\.)?gwiki\\.fr)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/"
+		},
+		{
+			"name": "guildwars2.com",
+			"regex": "(wiki(?:-(en|de|es|fr))?\\.guildwars2\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "(en|de|es|fr)",
+				"scriptPaths": [
+					"https://wiki-$1.guildwars2.com/"
+				]
+			}
+		},
+		{
 			"name": "ashesofcreation.wiki",
 			"regex": "((?:www\\.)?ashesofcreation\\.wiki)",
 			"articlePath": "/",
