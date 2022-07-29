@@ -10,6 +10,8 @@ declare module 'mediawiki-projects-list' {
 		articlePath: string;
 		/** Script path of the project */
 		scriptPath: string;
+		/** Only exists when the hostname contains a single wiki: Full script path to the wiki */
+		fullScriptPath?: string;
 		/** Only exists when the hostname contains multiple wikis: How to handle the id string */
 		idString?: {
 			/** Separator to join or split the id string on */
@@ -24,9 +26,9 @@ declare module 'mediawiki-projects-list' {
 		/** Whether the paths include matches of the regex */
 		regexPaths: boolean;
 		/** Wiki farm of the project */
-		wikiFarm: ("wikimedia" | "fandom" | "miraheze" | "wiki.gg" | "biligame" | "huijiwiki" | "shoutwiki") | null;
+		wikiFarm: ("biligame" | "fandom" | "huijiwiki" | "miraheze" | "shoutwiki" | "wiki.gg" | "wikimedia") | null;
 		/** List of extensions providing useful API endpoints */
-		extensions: ("CentralAuth" | "Cargo")[];
+		extensions: ("Cargo" | "CentralAuth" | "OAuth")[];
 		/** Replacement for spaces in the article URL */
 		urlSpaceReplacement: string;
 		/** Note about the specific project */

@@ -7,14 +7,15 @@ const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = r
  * @property {string} regex - Regex to match the project url
  * @property {string} articlePath - Article path of the project
  * @property {string} scriptPath - Script path of the project
+ * @property {string} [fullScriptPath] - Only exists when the hostname contains a single wiki: Full script path to the wiki
  * @property {object} [idString] - Only exists when the hostname contains multiple wikis: How to handle the id string
  * @property {string} idString.separator - Separator to join or split the id string on
  * @property {"asc"|"desc"} idString.direction - Order in which the project regex additional group matches should be chained to gain the id string
  * @property {string} idString.regex - Regex to match the id string
  * @property {string[]} idString.scriptPaths - How to turn the group matches of the id string regex into an URL to the script path, index based on group matches
  * @property {boolean} regexPaths - Whether the paths include matches of the regex
- * @property {?("wikimedia"|"fandom"|"miraheze"|"wiki.gg"|"biligame"|"huijiwiki"|"shoutwiki")} wikiFarm - Wiki farm of the project
- * @property {("CentralAuth"|"Cargo")[]} extensions - List of extensions providing useful API endpoints
+ * @property {?("biligame"|"fandom"|"huijiwiki"|"miraheze"|"shoutwiki"|"wiki.gg"|"wikimedia")} wikiFarm - Wiki farm of the project
+ * @property {("Cargo"|"CentralAuth"|"OAuth")[]} extensions - List of extensions providing useful API endpoints
  * @property {string} urlSpaceReplacement - Replacement for spaces in the article URL
  * @property {?string} note - Note about the specific project
  */

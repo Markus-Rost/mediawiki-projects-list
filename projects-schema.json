@@ -32,6 +32,10 @@
 						"type": "string",
 						"description": "Script path of the project"
 					},
+					"fullScriptPath": {
+						"type": "string",
+						"description": "Only exists when the hostname contains a single wiki: Full script path to the wiki"
+					},
 					"idString": {
 						"type": "object",
 						"description": "Only exists when the hostname contains multiple wikis: How to handle the id string",
@@ -80,13 +84,13 @@
 						"type": "string",
 						"description": "Wiki farm of the project",
 						"enum": [
-							"wikimedia",
-							"fandom",
-							"miraheze",
-							"wiki.gg",
 							"biligame",
+							"fandom",
 							"huijiwiki",
-							"shoutwiki"
+							"miraheze",
+							"shoutwiki",
+							"wiki.gg",
+							"wikimedia"
 						],
 						"default": null
 					},
@@ -97,8 +101,9 @@
 							"type": "string",
 							"description": "Name of an extension providing useful API endpoints",
 							"enum": [
+								"Cargo",
 								"CentralAuth",
-								"Cargo"
+								"OAuth"
 							]
 						},
 						"default": [],
