@@ -60,8 +60,8 @@ function inputToWikiProject(input) {
 	let result = null;
 	let wikiProject = wikiProjects.find( wikiProject => input.split('/').slice(0, 3).some( part => part.endsWith( wikiProject.name ) ) );
 	if ( wikiProject ) {
-		let articlePath = ( wikiProject.regexPaths ? '/' : wikiProject.articlePath );
-		let scriptPath = ( wikiProject.regexPaths ? '/' : wikiProject.scriptPath );
+		let articlePath = ( wikiProject.regexPaths ? '/' : wikiProject.articlePath.split('?')[0] ).replace(/[.*+?^${}()|\[\]\\]/g, '\\$&');
+		let scriptPath = ( wikiProject.regexPaths ? '/' : wikiProject.scriptPath ).replace(/[.*+?^${}()|\[\]\\]/g, '\\$&');
 		let regex = input.match( new RegExp( wikiProject.regex + `(?:${articlePath}|${scriptPath}|/?$)` ) );
 		if ( regex ) {
 			if ( wikiProject.regexPaths ) {
