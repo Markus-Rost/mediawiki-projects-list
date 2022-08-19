@@ -73,6 +73,20 @@
 			"fullScriptPath": "https://www.dragon-mania-legends.wiki/"
 		},
 		{
+			"name": "toweroffantasy.wiki",
+			"regex": "((?:www\\.)?toweroffantasy\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://toweroffantasy.wiki/"
+		},
+		{
+			"name": "dwarffortresswiki.org",
+			"regex": "((?:www\\.)?dwarffortresswiki\\.org)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://dwarffortresswiki.org/"
+		},
+		{
 			"name": "micronations.wiki",
 			"regex": "((?:([a-z-]{2,12})\\.)?micronations\\.wiki)",
 			"articlePath": "/wiki/",
@@ -90,6 +104,13 @@
 			"articlePath": "/wiki/index.php/",
 			"scriptPath": "/wiki/",
 			"fullScriptPath": "https://psu-clementine.net/wiki/"
+		},
+		{
+			"name": "miragerealms.co.uk",
+			"regex": "((?:www\\.)?miragerealms\\.co\\.uk)",
+			"articlePath": "/wiki/index.php/",
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://www.miragerealms.co.uk/wiki/"
 		},
 		{
 			"name": "lostmediawiki.com",
