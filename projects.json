@@ -1402,6 +1402,13 @@
 			"fullScriptPath": "https://switchbrew.org/w/"
 		},
 		{
+			"name": "wiki.hacks.guide",
+			"regex": "(wiki\\.hacks\\.guide)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://wiki.hacks.guide/w/"
+		},
+		{
 			"name": "eastwardwiki.com",
 			"regex": "((?:([a-z-]{2,12})\\.)?eastwardwiki\\.com)",
 			"articlePath": "/",
