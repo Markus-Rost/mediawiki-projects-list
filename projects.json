@@ -521,6 +521,18 @@
 			]
 		},
 		{
+			"name": "wiki.forgeofempires.com",
+			"regex": "((?:([a-z-]{2,12})\\.)?wiki\\.forgeofempires\\.com)",
+			"articlePath": "/index.php?title=",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.wiki.forgeofempires.com/"
+				]
+			}
+		},
+		{
 			"name": "wikihow.com",
 			"regex": "((?:www\\.)?wikihow\\.com)",
 			"articlePath": "/",
