@@ -68,9 +68,9 @@
 		{
 			"name": "dragon-mania-legends.wiki",
 			"regex": "((?:www\\.)?dragon-mania-legends\\.wiki)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://www.dragon-mania-legends.wiki/"
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://www.dragon-mania-legends.wiki/w/"
 		},
 		{
 			"name": "toweroffantasy.wiki",
@@ -130,8 +130,8 @@
 			"name": "thecyclefrontier.wiki",
 			"regex": "((?:www\\.)?thecyclefrontier\\.wiki)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/mediawiki/",
-			"fullScriptPath": "https://thecyclefrontier.wiki/mediawiki/"
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://thecyclefrontier.wiki/w/"
 		},
 		{
 			"name": "paradoxwikis.com",
