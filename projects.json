@@ -1745,21 +1745,27 @@
 			"regex": "((?:www\\.)?dreamcancel\\.com)",
 			"articlePath": "/wiki/index.php?title=",
 			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://dreamcancel.com/wiki/"
+			"fullScriptPath": "https://dreamcancel.com/wiki/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "wiki.supercombo.gg",
 			"regex": "(wiki\\.supercombo\\.gg)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://wiki.supercombo.gg/"
+			"fullScriptPath": "https://wiki.supercombo.gg/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "newchallenger.net",
 			"regex": "((?:www\\.)?newchallenger\\.net)",
 			"articlePath": "/w/index.php?title=",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://newchallenger.net/wiki/"
+			"fullScriptPath": "https://newchallenger.net/w/"
 		},
 		{
 			"name": "wiki.hardedge.org",
@@ -1772,22 +1778,28 @@
 			"name": "aocf.koumakan.jp",
 			"regex": "(aocf\\.koumakan\\.jp)",
 			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://aocf.koumakan.jp/"
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://aocf.koumakan.jp/w/"
 		},
 		{
 			"name": "dustloop.com",
 			"regex": "((?:www\\.)?dustloop\\.com)",
 			"articlePath": "/w/",
 			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://www.dustloop.com/wiki/"
+			"fullScriptPath": "https://www.dustloop.com/wiki/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "wiki.gbl.gg",
 			"regex": "(wiki\\.gbl\\.gg)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://wiki.gbl.gg/"
+			"fullScriptPath": "https://wiki.gbl.gg/",
+			"extensions": [
+				"Cargo"
+			]
 		},
 		{
 			"name": "liquipedia.net",
