@@ -1743,9 +1743,9 @@
 		{
 			"name": "dreamcancel.com",
 			"regex": "((?:www\\.)?dreamcancel\\.com)",
-			"articlePath": "/wiki/index.php?title=",
-			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://dreamcancel.com/wiki/",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://dreamcancel.com/w/",
 			"extensions": [
 				"Cargo"
 			]
