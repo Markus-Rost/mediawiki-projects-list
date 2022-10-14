@@ -1802,6 +1802,39 @@
 			]
 		},
 		{
+			"name": "happytreefriendswiki.com",
+			"regex": "((?:www\\.)?happytreefriendswiki\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://www.happytreefriendswiki.com/",
+		},
+		{
+			"name": "biosector01.com",
+			"regex": "((?:(hf|www)\\.)?biosector01\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "(hf|www)",
+				"scriptPaths": [
+					"https://$1.biosector01.com/w/"
+				]
+			}
+		},
+		{
+			"name": "chronistwiki.de",
+			"regex": "((?:www\\.)?chronistwiki\\.de)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://chronistwiki.de/w/",
+		},
+		{
+			"name": "nuvapedia.fr",
+			"regex": "((?:www\\.)?nuvapedia\\.fr)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://www.nuvapedia.fr/",
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
