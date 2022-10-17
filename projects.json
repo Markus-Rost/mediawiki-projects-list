@@ -1806,7 +1806,7 @@
 			"regex": "((?:www\\.)?happytreefriendswiki\\.com)",
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.happytreefriendswiki.com/",
+			"fullScriptPath": "https://www.happytreefriendswiki.com/"
 		},
 		{
 			"name": "biosector01.com",
@@ -1825,14 +1825,14 @@
 			"regex": "((?:www\\.)?chronistwiki\\.de)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://chronistwiki.de/w/",
+			"fullScriptPath": "https://chronistwiki.de/w/"
 		},
 		{
 			"name": "nuvapedia.fr",
 			"regex": "((?:www\\.)?nuvapedia\\.fr)",
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.nuvapedia.fr/",
+			"fullScriptPath": "https://www.nuvapedia.fr/"
 		},
 		{
 			"name": "liquipedia.net",
