@@ -3,10 +3,10 @@
 	"frontendProxies": [
 		{
 			"name": "wikiless.org",
-			"regex": "wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50})(?:&|/?$)",
-			"namePath": "https://wikiless.org/?lang=$1",
-			"articlePath": "https://wikiless.org/wiki/?lang=$1",
-			"scriptPath": "https://$1.wikipedia.org/w/",
+			"regex": "(wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50}))(?:&|/?$)",
+			"namePath": "https://wikiless.org/?lang=$2",
+			"articlePath": "https://wikiless.org/wiki/?lang=$2",
+			"scriptPath": "https://$2.wikipedia.org/w/",
 			"idString": {
 				"regex": "([a-z\\d-]{1,50})",
 				"scriptPaths": [
@@ -16,10 +16,10 @@
 		},
 		{
 			"name": "wikiwand.com",
-			"regex": "(?:www\\.)?wikiwand\\.com/([a-z\\d-]{1,50})/?",
-			"namePath": "https://www.wikiwand.com/$1/",
-			"articlePath": "https://www.wikiwand.com/$1/",
-			"scriptPath": "https://$1.wikipedia.org/w/",
+			"regex": "((?:www\\.)?wikiwand\\.com/([a-z\\d-]{1,50}))/?",
+			"namePath": "https://www.wikiwand.com/$2/",
+			"articlePath": "https://www.wikiwand.com/$2/",
+			"scriptPath": "https://$2.wikipedia.org/w/",
 			"relativeFix": "^/wiki(?=/)",
 			"idString": {
 				"regex": "([a-z\\d-]{1,50})",
@@ -30,18 +30,18 @@
 		},
 		{
 			"name": "breezewiki.com",
-			"regex": "breezewiki\\.com/([a-z\\d-]{1,50})(?:/wiki/|/?$)",
-			"namePath": "https://breezewiki.com/$1/",
-			"articlePath": "https://breezewiki.com/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/",
+			"regex": "(breezewiki\\.com/([a-z\\d-]{1,50}))(?:/wiki/|/?$)",
+			"namePath": "https://breezewiki.com/$2/",
+			"articlePath": "https://breezewiki.com/$2/wiki/",
+			"scriptPath": "https://$2.fandom.com/",
 			"note": "Missing language support."
 		},
 		{
 			"name": "breezewiki.pussthecat.org",
-			"regex": "breezewiki\\.pussthecat\\.org/([a-z\\d-]{1,50})(?:/wiki/|/?$)",
-			"namePath": "https://breezewiki.pussthecat.org/$1/",
-			"articlePath": "https://breezewiki.pussthecat.org/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/",
+			"regex": "(breezewiki\\.pussthecat\\.org/([a-z\\d-]{1,50}))(?:/wiki/|/?$)",
+			"namePath": "https://breezewiki.pussthecat.org/$2/",
+			"articlePath": "https://breezewiki.pussthecat.org/$2/wiki/",
+			"scriptPath": "https://$2.fandom.com/",
 			"note": "Missing language support."
 		}
 	],

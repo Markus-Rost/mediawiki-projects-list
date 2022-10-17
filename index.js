@@ -127,12 +127,14 @@ function inputToWikiProject(input) {
 function urlToIdString(url) {
 	if ( functionCache.urlToIdString.has(url.href) ) return functionCache.urlToIdString.get(url.href);
 	let result = null;
-	let wikiProject = wikiProjects.find( wikiProject => wikiProject.idString && url.hostname.endsWith( wikiProject.name ) );
-	if ( wikiProject ) {
-		let regex = url.href.match( new RegExp( wikiProject.regex ) )?.slice(2);
+	/** @type {WikiProject|FrontendProxy|undefined} */
+	let project = wikiProjects.find( wikiProject => wikiProject.idString && url.hostname.endsWith( wikiProject.name ) );
+	if ( !project ) project = frontendProxies.find( frontendProxy => frontendProxy.idString && url.hostname.endsWith( frontendProxy.name ) );
+	if ( project ) {
+		let regex = url.href.match( new RegExp( project.regex ) )?.slice(2);
 		if ( regex?.length ) {
-			if ( wikiProject.idString.direction === 'desc' ) regex.reverse();
-			result = regex.join(wikiProject.idString.separator);
+			if ( project.idString.direction === 'desc' ) regex.reverse();
+			result = regex.join(project.idString.separator);
 		}
 	}
 	functionCache.urlToIdString.set(url.href, result);
@@ -152,12 +154,12 @@ function idStringToUrl(idString, projectName) {
 		return ( result ? new URL(result) : result );
 	}
 	let result = null;
-	let idString = wikiProjects.find( wikiProject => wikiProject.idString && wikiProject.name === projectName )?.idString;
-	if ( !idString ) idString = frontendProxies.find( frontendProxy => frontendProxy.idString && frontendProxy.name === projectName )?.idString;
-	if ( idString ) {
-		let regex = idString.match( new RegExp( '^' + idString.regex + '$' ) )?.[1].split(idString.separator);
-		if ( regex && regex.length <= idString.scriptPaths.length ) {
-			result = idString.scriptPaths[regex.length - 1].replace( /\$(\d)/g, (match, n) => regex[n - 1] );
+	let project = wikiProjects.find( wikiProject => wikiProject.idString && wikiProject.name === projectName )?.idString;
+	if ( !project ) project = frontendProxies.find( frontendProxy => frontendProxy.idString && frontendProxy.name === projectName )?.idString;
+	if ( project ) {
+		let regex = idString.match( new RegExp( '^' + project.regex + '$' ) )?.[1].split(project.separator);
+		if ( regex && regex.length <= project.scriptPaths.length ) {
+			result = project.scriptPaths[regex.length - 1].replace( /\$(\d)/g, (match, n) => regex[n - 1] );
 		}
 	}
 	functionCache.idStringToUrl.set(cacheKey, result);
