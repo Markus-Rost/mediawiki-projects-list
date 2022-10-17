@@ -3,10 +3,18 @@
 	"frontendProxies": [
 		{
 			"name": "wikiless.org",
-			"regex": "wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50})(?:&|$)",
+			"regex": "wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50})(?:&|/?$)",
 			"namePath": "https://wikiless.org/?lang=$1",
 			"articlePath": "https://wikiless.org/wiki/?lang=$1",
 			"scriptPath": "https://$1.wikipedia.org/w/"
+		},
+		{
+			"name": "wikiwand.com",
+			"regex": "(?:www\\.)?wikiwand\\.com/([a-z\\d-]{1,50})/?",
+			"namePath": "https://www.wikiwand.com/$1/",
+			"articlePath": "https://www.wikiwand.com/$1/",
+			"scriptPath": "https://$1.wikipedia.org/w/",
+			"relativeFix": "^/wiki(?=/)"
 		},
 		{
 			"name": ".breezewiki.com",

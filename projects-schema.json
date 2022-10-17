@@ -36,6 +36,11 @@
 						"type": "string",
 						"description": "Script path of the proxy"
 					},
+					"relativeFix": {
+						"type": "string",
+						"description": "Regex to remove from the relative url",
+						"default": null
+					},
 					"note": {
 						"type": "string",
 						"description": "Note about the specific proxy",

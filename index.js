@@ -29,6 +29,7 @@ const PROJECTS = require('./projects.json');
  * @property {string} namePath - Name path of the proxy
  * @property {string} articlePath - Article path of the proxy
  * @property {string} scriptPath - Script path of the proxy
+ * @property {?string} relativeFix - Regex to remove from the relative url
  * @property {?string} note - Note about the specific proxy
  */
 
@@ -71,6 +72,7 @@ const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
  * @type {FrontendProxy[]}
  */
 const frontendProxies = PROJECTS.frontendProxies.map( frontendProxy => {
+	frontendProxy.relativeFix ??= frontendProxySchema.relativeFix.default;
 	frontendProxy.note ??= frontendProxySchema.note.default;
 	return frontendProxy;
 } );
@@ -192,8 +194,19 @@ function urlToFix(url) {
 	let frontendProxy = frontendProxies.find( frontendProxy => hostname.endsWith( frontendProxy.name ) );
 	if ( frontendProxy ) {
 		let splitLength = frontendProxy.namePath.split('/').length;
-		let querykeys = frontendProxy.namePath.split('?').slice(1).join('?').split('&').flatMap( query => query.split('=', 1) );
-		if ( splitLength > 4 && querykeys.length ) {
+		let querykeys = frontendProxy.namePath.split('?').slice(1).join('?').split('&').flatMap( query => {
+			if ( !query ) return [];
+			return query.split('=', 1);
+		} );
+		if ( splitLength > 4 && querykeys.length && frontendProxy.relativeFix ) {
+			result = (href, pagelink) => {
+				let prepend = '/' + pagelink.split('/', splitLength).slice(3, -1).join('/');
+				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
+				let append = ( href.includes('?') ? '&' : '?' ) + querystring.join('&');
+				return prepend + href.replace( new RegExp( frontendProxy.relativeFix ), '' ) + append;
+			};
+		}
+		else if ( splitLength > 4 && querykeys.length ) {
 			result = (href, pagelink) => {
 				let prepend = '/' + pagelink.split('/', splitLength).slice(3, -1).join('/');
 				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
@@ -201,14 +214,29 @@ function urlToFix(url) {
 				return prepend + href + append;
 			};
 		}
+		else if ( splitLength > 4 && frontendProxy.relativeFix ) {
+			result = (href, pagelink) => {
+				let prepend = '/' + pagelink.split('/', splitLength).slice(3, -1).join('/');
+				return prepend + href.replace( new RegExp( frontendProxy.relativeFix ), '' );
+			}
+		}
 		else if ( splitLength > 4 ) {
 			result = (href, pagelink) => '/' + pagelink.split('/', splitLength).slice(3, -1).join('/') + href;
+		}
+		else if ( querykeys.length && frontendProxy.relativeFix ) {
+			result = (href, pagelink) => {
+				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
+				return href.replace( new RegExp( frontendProxy.relativeFix ), '' ) + ( href.includes('?') ? '&' : '?' ) + querystring.join('&');
+			}
 		}
 		else if ( querykeys.length ) {
 			result = (href, pagelink) => {
 				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
 				return href + ( href.includes('?') ? '&' : '?' ) + querystring.join('&');
 			}
+		}
+		else if ( frontendProxy.relativeFix ) {
+			result = (href, pagelink) => href.replace( new RegExp( frontendProxy.relativeFix ), '' );
 		}
 	}
 	functionCache.urlToFix.set(hostname, result);

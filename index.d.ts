@@ -47,6 +47,8 @@ declare module 'mediawiki-projects-list' {
 		articlePath: string;
 		/** Script path of the proxy */
 		scriptPath: string;
+		/** Regex to remove from the relative url */
+		relativeFix: string;
 		/** Note about the specific proxy */
 		note: string | null;
 	};
