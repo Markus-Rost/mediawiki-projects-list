@@ -49,6 +49,17 @@ declare module 'mediawiki-projects-list' {
 		scriptPath: string;
 		/** Regex to remove from the relative url */
 		relativeFix: string;
+		/** Only exists when the hostname contains multiple wikis: How to handle the id string */
+		idString?: {
+			/** Separator to join or split the id string on */
+			separator: string;
+			/** Order in which the project regex additional group matches should be chained to gain the id string */
+			direction: "asc" | "desc";
+			/** Regex to match the id string */
+			regex: string;
+			/**  How to turn the group matches of the id string regex into an URL to the script path, index based on group matches */
+			scriptPaths: string[];
+		};
 		/** Note about the specific proxy */
 		note: string | null;
 	};

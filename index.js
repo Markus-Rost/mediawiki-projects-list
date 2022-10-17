@@ -30,6 +30,11 @@ const PROJECTS = require('./projects.json');
  * @property {string} articlePath - Article path of the proxy
  * @property {string} scriptPath - Script path of the proxy
  * @property {?string} relativeFix - Regex to remove from the relative url
+ * @property {object} [idString] - Only exists when the hostname contains multiple wikis: How to handle the id string
+ * @property {string} idString.separator - Separator to join or split the id string on
+ * @property {"asc"|"desc"} idString.direction - Order in which the project regex additional group matches should be chained to gain the id string
+ * @property {string} idString.regex - Regex to match the id string
+ * @property {string[]} idString.scriptPaths - How to turn the group matches of the id string regex into an URL to the script path, index based on group matches
  * @property {?string} note - Note about the specific proxy
  */
 
@@ -72,6 +77,10 @@ const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
  * @type {FrontendProxy[]}
  */
 const frontendProxies = PROJECTS.frontendProxies.map( frontendProxy => {
+	if ( frontendProxy.idString ) {
+		frontendProxy.idString.separator ??= frontendProxySchema.idString.properties.separator.default;
+		frontendProxy.idString.direction ??= frontendProxySchema.idString.properties.direction.default;
+	}
 	frontendProxy.relativeFix ??= frontendProxySchema.relativeFix.default;
 	frontendProxy.note ??= frontendProxySchema.note.default;
 	return frontendProxy;
@@ -143,11 +152,12 @@ function idStringToUrl(idString, projectName) {
 		return ( result ? new URL(result) : result );
 	}
 	let result = null;
-	let wikiProject = wikiProjects.find( wikiProject => wikiProject.idString && wikiProject.name === projectName )?.idString;
-	if ( wikiProject ) {
-		let regex = idString.match( new RegExp( '^' + wikiProject.regex + '$' ) )?.[1].split(wikiProject.separator);
-		if ( regex && regex.length <= wikiProject.scriptPaths.length ) {
-			result = wikiProject.scriptPaths[regex.length - 1].replace( /\$(\d)/g, (match, n) => regex[n - 1] );
+	let idString = wikiProjects.find( wikiProject => wikiProject.idString && wikiProject.name === projectName )?.idString;
+	if ( !idString ) idString = frontendProxies.find( frontendProxy => frontendProxy.idString && frontendProxy.name === projectName )?.idString;
+	if ( idString ) {
+		let regex = idString.match( new RegExp( '^' + idString.regex + '$' ) )?.[1].split(idString.separator);
+		if ( regex && regex.length <= idString.scriptPaths.length ) {
+			result = idString.scriptPaths[regex.length - 1].replace( /\$(\d)/g, (match, n) => regex[n - 1] );
 		}
 	}
 	functionCache.idStringToUrl.set(cacheKey, result);

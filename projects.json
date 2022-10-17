@@ -6,7 +6,13 @@
 			"regex": "wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50})(?:&|/?$)",
 			"namePath": "https://wikiless.org/?lang=$1",
 			"articlePath": "https://wikiless.org/wiki/?lang=$1",
-			"scriptPath": "https://$1.wikipedia.org/w/"
+			"scriptPath": "https://$1.wikipedia.org/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://wikiless.org/?lang=$1"
+				]
+			}
 		},
 		{
 			"name": "wikiwand.com",
@@ -14,15 +20,13 @@
 			"namePath": "https://www.wikiwand.com/$1/",
 			"articlePath": "https://www.wikiwand.com/$1/",
 			"scriptPath": "https://$1.wikipedia.org/w/",
-			"relativeFix": "^/wiki(?=/)"
-		},
-		{
-			"name": ".breezewiki.com",
-			"regex": "([a-z\\d-]{1,50})\\.breezewiki\\.com(?:/wiki/|/?$)",
-			"namePath": "https://breezewiki.com/$1/",
-			"articlePath": "https://breezewiki.com/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/",
-			"note": "Missing language support."
+			"relativeFix": "^/wiki(?=/)",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://www.wikiwand.com/$1/"
+				]
+			}
 		},
 		{
 			"name": "breezewiki.com",

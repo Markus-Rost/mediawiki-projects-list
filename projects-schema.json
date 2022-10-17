@@ -41,6 +41,45 @@
 						"description": "Regex to remove from the relative url",
 						"default": null
 					},
+					"idString": {
+						"type": "object",
+						"description": "Only exists when the hostname contains multiple wikis: How to handle the id string",
+						"properties": {
+							"separator": {
+								"type": "string",
+								"description": "Separator to join or split the id string on",
+								"default": "."
+							},
+							"direction": {
+								"type": "string",
+								"description": "Order in which the project regex additional group matches should be chained to gain the id string",
+								"enum": [
+									"asc",
+									"desc"
+								],
+								"default": "desc"
+							},
+							"regex": {
+								"type": "string",
+								"description": "Regex to match the id string"
+							},
+							"scriptPaths": {
+								"type": "array",
+								"description": "How to turn the group matches of the id string regex into an URL to the script path, index based on group matches",
+								"items": {
+									"type": "string",
+									"description": "Replacement for the id string regex match."
+								},
+								"contains": true,
+								"additionalItems": false
+							}
+						},
+						"required": [
+							"regex",
+							"scriptPaths"
+						],
+						"additionalProperties": false
+					},
 					"note": {
 						"type": "string",
 						"description": "Note about the specific proxy",
