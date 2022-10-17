@@ -35,7 +35,9 @@ const PROJECTS = require('./projects.json');
  * @type {{
  *     inputToWikiProject: Map<string, ?{fullArticlePath: string, fullScriptPath: string, wikiProject: WikiProject}>,
  *     urlToIdString: Map<string, ?string>,
- *     idStringToUrl: Map<string, ?string>
+ *     idStringToUrl: Map<string, ?string>,
+ *     inputToFrontendProxy: Map<string, ?{fullNamePath: string, fullArticlePath: string, fullScriptPath: string, frontendProxy: FrontendProxy}>,
+ *     urlToFix: Map<string, ?((href:String,pagelink:String)=>String)>
  * }}
  */
 const functionCache = {
@@ -92,6 +94,10 @@ function inputToWikiProject(input) {
 				fullScriptPath: 'https://' + regex[1] + scriptPath,
 				wikiProject: wikiProject
 			};
+			if ( result.fullArticlePath.includes('?') && !result.fullArticlePath.endsWith('=') ) {
+				result.fullArticlePath = result.fullArticlePath.replace( '?', '$1?' );
+			}
+			else result.fullArticlePath += '$1';
 		}
 	}
 	functionCache.inputToWikiProject.set(input, result);
@@ -160,6 +166,10 @@ function inputToFrontendProxy(input) {
 				fullScriptPath: frontendProxy.scriptPath.replace( /\$(\d)/g, (match, n) => regex[n] ),
 				frontendProxy: frontendProxy
 			};
+			if ( result.fullArticlePath.includes('?') && !result.fullArticlePath.endsWith('=') ) {
+				result.fullArticlePath = result.fullArticlePath.replace( '?', '$1?' );
+			}
+			else result.fullArticlePath += '$1';
 		}
 	}
 	functionCache.inputToFrontendProxy.set(input, result);
@@ -176,9 +186,26 @@ function urlToFix(url) {
 	if ( functionCache.urlToFix.has(hostname) ) return functionCache.urlToFix.get(hostname);
 	let result = null;
 	let frontendProxy = frontendProxies.find( frontendProxy => hostname.endsWith( frontendProxy.name ) );
-	if ( frontendProxy?.namePath.split('/').length > 4 ) {
+	if ( frontendProxy ) {
 		let splitLength = frontendProxy.namePath.split('/').length;
-		result = (href, pagelink) => '/' + pagelink.split('/', splitLength).slice(3, -1).join('/') + href;
+		let querykeys = frontendProxy.namePath.split('?').slice(1).join('?').split('&').flatMap( query => query.split('=', 1) );
+		if ( splitLength > 4 && querykeys.length ) {
+			result = (href, pagelink) => {
+				let prepend = '/' + pagelink.split('/', splitLength).slice(3, -1).join('/');
+				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
+				let append = ( href.includes('?') ? '&' : '?' ) + querystring.join('&');
+				return prepend + href + append;
+			};
+		}
+		else if ( splitLength > 4 ) {
+			result = (href, pagelink) => '/' + pagelink.split('/', splitLength).slice(3, -1).join('/') + href;
+		}
+		else if ( querykeys.length ) {
+			result = (href, pagelink) => {
+				let querystring = pagelink.split('?').slice(1).join('?').split('&').filter( query => querykeys.includes( query.split('=', 1)[0] ) );
+				return href + ( href.includes('?') ? '&' : '?' ) + querystring.join('&');
+			}
+		}
 	}
 	functionCache.urlToFix.set(hostname, result);
 	return result;
