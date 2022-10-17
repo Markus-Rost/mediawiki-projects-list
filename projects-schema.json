@@ -9,6 +9,46 @@
 			"type": "string",
 			"format": "path"
 		},
+		"frontendProxies": {
+			"type": "array",
+			"description": "List of frontend proxies",
+			"items": {
+				"type": "object",
+				"description": "A frontend proxy",
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Hostname of the proxy"
+					},
+					"regex": {
+						"type": "string",
+						"description": "Regex to match the proxy url"
+					},
+					"namePath": {
+						"type": "string",
+						"description": "Name path of the proxy"
+					},
+					"articlePath": {
+						"type": "string",
+						"description": "Article path of the proxy"
+					},
+					"scriptPath": {
+						"type": "string",
+						"description": "Script path of the project"
+					}
+				},
+				"required": [
+					"name",
+					"regex",
+					"namePath",
+					"articlePath",
+					"scriptPath"
+				],
+				"additionalProperties": false
+			},
+			"uniqueItemProperties": ["name"],
+			"additionalItems": false
+		},
 		"wikiProjects": {
 			"type": "array",
 			"description": "List of MediaWiki projects",

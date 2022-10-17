@@ -1,4 +1,5 @@
 const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = require('./projects-schema.json');
+const PROJECTS = require('./projects.json');
 
 /**
  * A MediaWiki project
@@ -21,6 +22,16 @@ const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = r
  */
 
 /**
+ * A frontend proxy
+ * @typedef {object} FrontendProxy
+ * @property {string} name - Hostname of the proxy
+ * @property {string} regex - Regex to match the proxy url
+ * @property {string} namePath - Name path of the proxy
+ * @property {string} articlePath - Article path of the proxy
+ * @property {string} scriptPath - Script path of the proxy
+ */
+
+/**
  * @type {{
  *     inputToWikiProject: Map<string, ?{fullArticlePath: string, fullScriptPath: string, wikiProject: WikiProject}>,
  *     urlToIdString: Map<string, ?string>,
@@ -30,14 +41,16 @@ const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = r
 const functionCache = {
 	inputToWikiProject: new Map(),
 	urlToIdString: new Map(),
-	idStringToUrl: new Map()
+	idStringToUrl: new Map(),
+	inputToFrontendProxy: new Map(),
+	urlToFix: new Map()
 };
 
 /**
  * List of MediaWiki projects
  * @type {WikiProject[]}
  */
-const wikiProjects = require('./projects.json').wikiProjects.map( wikiProject => {
+const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
 	if ( wikiProject.idString ) {
 		wikiProject.idString.separator ??= wikiProjectSchema.idString.properties.separator.default;
 		wikiProject.idString.direction ??= wikiProjectSchema.idString.properties.direction.default;
@@ -49,6 +62,12 @@ const wikiProjects = require('./projects.json').wikiProjects.map( wikiProject =>
 	wikiProject.note ??= wikiProjectSchema.note.default;
 	return wikiProject;
 } );
+
+/**
+ * List of frontend proxies
+ * @type {FrontendProxy[]}
+ */
+const frontendProxies = PROJECTS.frontendProxies;
 
 /**
  * 
@@ -123,9 +142,54 @@ function idStringToUrl(idString, projectName) {
 	return ( result ? new URL(result) : result );
 }
 
+/**
+ * 
+ * @param {string} input 
+ * @returns {?{fullNamePath: string, fullArticlePath: string, fullScriptPath: string, frontendProxy: FrontendProxy}}
+ */
+function inputToFrontendProxy(input) {
+	if ( functionCache.inputToFrontendProxy.has(input) ) return structuredClone(functionCache.inputToFrontendProxy.get(input));
+	let result = null;
+	let frontendProxy = frontendProxies.find( frontendProxy => input.split('/').slice(0, 3).some( part => part.endsWith( frontendProxy.name ) ) );
+	if ( frontendProxy ) {
+		let regex = input.match( new RegExp( frontendProxy.regex ) );
+		if ( regex ) {
+			result = {
+				fullNamePath: frontendProxy.namePath.replace( /\$(\d)/g, (match, n) => regex[n] ),
+				fullArticlePath: frontendProxy.articlePath.replace( /\$(\d)/g, (match, n) => regex[n] ),
+				fullScriptPath: frontendProxy.scriptPath.replace( /\$(\d)/g, (match, n) => regex[n] ),
+				frontendProxy: frontendProxy
+			};
+		}
+	}
+	functionCache.inputToFrontendProxy.set(input, result);
+	return structuredClone(result);
+}
+
+/**
+ * 
+ * @param {string} url 
+ * @returns {?((href:String,pagelink:String)=>String)}
+ */
+function urlToFix(url) {
+	let hostname = url.split('/')[2];
+	if ( functionCache.urlToFix.has(hostname) ) return functionCache.urlToFix.get(hostname);
+	let result = null;
+	let frontendProxy = frontendProxies.find( frontendProxy => hostname.endsWith( frontendProxy.name ) );
+	if ( frontendProxy?.namePath.split('/').length > 4 ) {
+		let splitLength = frontendProxy.namePath.split('/').length;
+		result = (href, pagelink) => '/' + pagelink.split('/', splitLength).slice(3, -1).join('/') + href;
+	}
+	functionCache.urlToFix.set(hostname, result);
+	return result;
+}
+
 module.exports = {
 	wikiProjects,
+	frontendProxies,
 	inputToWikiProject,
 	urlToIdString,
-	idStringToUrl
+	idStringToUrl,
+	inputToFrontendProxy,
+	urlToFix
 };
