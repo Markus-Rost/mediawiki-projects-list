@@ -35,8 +35,27 @@ declare module 'mediawiki-projects-list' {
 		note: string | null;
 	};
 
+	/** A frontend proxy */
+	export type FrontendProxy = {
+		/** Hostname of the proxy */
+		name: string;
+		/** Regex to match the proxy url */
+		regex: string;
+		/** Name path of the proxy */
+		namePath: string;
+		/** Article path of the proxy */
+		articlePath: string;
+		/** Script path of the proxy */
+		scriptPath: string;
+		/** Note about the specific proxy */
+		note: string | null;
+	};
+
 	/** List of MediaWiki projects */
 	export const wikiProjects: WikiProject[];
+
+	/** List of frontend proxies */
+	export const frontendProxies: FrontendProxy[];
 
 	export function inputToWikiProject(input: string): {
 		fullArticlePath: string;
@@ -47,5 +66,14 @@ declare module 'mediawiki-projects-list' {
 	export function urlToIdString(url: URL): string | null;
 
 	export function idStringToUrl(idString: string, projectName: string): URL | null;
+
+	export function inputToWikiProject(input: string): {
+		fullNamePath: string;
+		fullArticlePath: string;
+		fullScriptPath: string;
+		frontendProxy: FrontendProxy;
+	} | null;
+
+	export function urlToFix(url: string): ((href: string, pagelink: string) => string) | null;
 
 }

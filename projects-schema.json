@@ -34,7 +34,12 @@
 					},
 					"scriptPath": {
 						"type": "string",
-						"description": "Script path of the project"
+						"description": "Script path of the proxy"
+					},
+					"note": {
+						"type": "string",
+						"description": "Note about the specific proxy",
+						"default": null
 					}
 				},
 				"required": [

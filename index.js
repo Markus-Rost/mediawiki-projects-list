@@ -1,4 +1,4 @@
-const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}}} = require('./projects-schema.json');
+const {properties: {wikiProjects: {items: {properties: wikiProjectSchema}}, frontendProxies: {items: {properties: frontendProxySchema}}}} = require('./projects-schema.json');
 const PROJECTS = require('./projects.json');
 
 /**
@@ -29,6 +29,7 @@ const PROJECTS = require('./projects.json');
  * @property {string} namePath - Name path of the proxy
  * @property {string} articlePath - Article path of the proxy
  * @property {string} scriptPath - Script path of the proxy
+ * @property {?string} note - Note about the specific proxy
  */
 
 /**
@@ -69,7 +70,10 @@ const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
  * List of frontend proxies
  * @type {FrontendProxy[]}
  */
-const frontendProxies = PROJECTS.frontendProxies;
+const frontendProxies = PROJECTS.frontendProxies.map( frontendProxy => {
+	frontendProxy.note ??= frontendProxySchema.note.default;
+	return frontendProxy;
+} );
 
 /**
  * 

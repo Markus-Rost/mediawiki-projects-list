@@ -13,21 +13,24 @@
 			"regex": "([a-z\\d-]{1,50})\\.breezewiki\\.com(?:/wiki/|/?$)",
 			"namePath": "https://breezewiki.com/$1/",
 			"articlePath": "https://breezewiki.com/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/"
+			"scriptPath": "https://$1.fandom.com/",
+			"note": "Missing language support."
 		},
 		{
 			"name": "breezewiki.com",
 			"regex": "breezewiki\\.com/([a-z\\d-]{1,50})(?:/wiki/|/?$)",
 			"namePath": "https://breezewiki.com/$1/",
 			"articlePath": "https://breezewiki.com/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/"
+			"scriptPath": "https://$1.fandom.com/",
+			"note": "Missing language support."
 		},
 		{
 			"name": "breezewiki.pussthecat.org",
 			"regex": "breezewiki\\.pussthecat\\.org/([a-z\\d-]{1,50})(?:/wiki/|/?$)",
 			"namePath": "https://breezewiki.pussthecat.org/$1/",
 			"articlePath": "https://breezewiki.pussthecat.org/$1/wiki/",
-			"scriptPath": "https://$1.fandom.com/"
+			"scriptPath": "https://$1.fandom.com/",
+			"note": "Missing language support."
 		}
 	],
 	"wikiProjects": [
