@@ -80,7 +80,7 @@ declare module 'mediawiki-projects-list' {
 
 	export function idStringToUrl(idString: string, projectName: string): URL | null;
 
-	export function inputToWikiProject(input: string): {
+	export function inputToFrontendProxy(input: string): {
 		fullNamePath: string;
 		fullArticlePath: string;
 		fullScriptPath: string;
