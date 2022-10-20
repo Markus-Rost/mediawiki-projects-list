@@ -350,6 +350,16 @@
 			]
 		},
 		{
+			"name": "zeldapedia.wiki",
+			"regex": "((?:www\\.)?zeldapedia\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://zeldapedia.wiki/w/",
+			"extensions": [
+				"Cargo"
+			]
+		},
+		{
 			"name": "bulbagarden.net",
 			"regex": "((bulbapedia|archives|bulbanews)\\.bulbagarden\\.net)",
 			"articlePath": "/wiki/",
@@ -1878,16 +1888,6 @@
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://www.nuvapedia.fr/"
-		},
-		{
-			"name": "zeldapedia.wiki",
-			"regex": "((?:www\\.)?zeldapedia\\.wiki)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://zeldapedia.wiki/w/",
-			"extensions": [
-				"Cargo"
-			]
 		},
 		{
 			"name": "liquipedia.net",
