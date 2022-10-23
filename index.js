@@ -100,19 +100,21 @@ function inputToWikiProject(input) {
 		let scriptPath = ( wikiProject.regexPaths ? '/' : wikiProject.scriptPath ).replace(/[.*+?^${}()|\[\]\\]/g, '\\$&');
 		let regex = input.match( new RegExp( wikiProject.regex + `(?:${articlePath}|${scriptPath}|/?$)` ) );
 		if ( regex ) {
+			scriptPath = wikiProject.scriptPath;
+			articlePath = wikiProject.articlePath;
 			if ( wikiProject.regexPaths ) {
-				scriptPath = wikiProject.scriptPath.replace( /\$(\d)/g, (match, n) => regex[n] );
-				articlePath = wikiProject.articlePath.replace( /\$(\d)/g, (match, n) => regex[n] );
+				scriptPath = scriptPath.replace( /\$(\d)/g, (match, n) => regex[n] );
+				articlePath = articlePath.replace( /\$(\d)/g, (match, n) => regex[n] );
 			}
+			if ( articlePath.includes('?') && !articlePath.endsWith('=') ) {
+				articlePath = articlePath.replace( '?', '$1?' );
+			}
+			else articlePath += '$1';
 			result = {
 				fullArticlePath: 'https://' + regex[1] + articlePath,
 				fullScriptPath: 'https://' + regex[1] + scriptPath,
 				wikiProject: wikiProject
 			};
-			if ( result.fullArticlePath.includes('?') && !result.fullArticlePath.endsWith('=') ) {
-				result.fullArticlePath = result.fullArticlePath.replace( '?', '$1?' );
-			}
-			else result.fullArticlePath += '$1';
 		}
 	}
 	functionCache.inputToWikiProject.set(input, result);
