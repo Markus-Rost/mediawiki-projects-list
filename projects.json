@@ -394,6 +394,13 @@
 			}
 		},
 		{
+			"name": "fallout.wiki",
+			"regex": "(fallout\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://fallout.wiki/"
+		},
+		{
 			"name": "fallout-wiki.com",
 			"regex": "((?:www\\.)?fallout-wiki\\.com)",
 			"articlePath": "/",
@@ -1256,13 +1263,6 @@
 			"articlePath": "/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.halo.fr/"
-		},
-		{
-			"name": "glitchtale.com",
-			"regex": "((?:www\\.)?glitchtale\\.com)",
-			"articlePath": "/wiki/index.php/",
-			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://glitchtale.com/wiki/"
 		},
 		{
 			"name": "wiki.therofl98.co",
