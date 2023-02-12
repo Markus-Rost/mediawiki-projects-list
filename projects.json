@@ -351,11 +351,11 @@
 			]
 		},
 		{
-			"name": "zeldapedia.wiki",
-			"regex": "((?:www\\.)?zeldapedia\\.wiki)",
+			"name": "zeldawiki.wiki",
+			"regex": "(zeldawiki\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://zeldapedia.wiki/w/",
+			"fullScriptPath": "https://zeldawiki.wiki/w/",
 			"extensions": [
 				"Cargo"
 			]
@@ -572,11 +572,11 @@
 			"fullScriptPath": "https://ffxiv.consolegameswiki.com/mediawiki/"
 		},
 		{
-			"name": "dc-multiverse.dcwikis.com",
-			"regex": "(dc-multiverse\\.dcwikis\\.com)",
+			"name": "dcmultiversewiki.com",
+			"regex": "((?:www\\.)?dcmultiversewiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://dc-multiverse.dcwikis.com/w/",
+			"fullScriptPath": "https://dcmultiversewiki.com/w/",
 			"wikiFarm": "miraheze",
 			"extensions": [
 				"CentralAuth",
@@ -1858,6 +1858,88 @@
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://www.nuvapedia.fr/"
+		},
+		{
+			"name": "detectiveconanworld.com",
+			"regex": "((?:www\\.)?detectiveconanworld\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://www.detectiveconanworld.com/wiki/"
+		},
+		{
+			"name": "conanwiki.org",
+			"regex": "((?:www\\.)?conanwiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://conanwiki.org/"
+		},
+		{
+			"name": "conanpedia.com",
+			"regex": "((?:www\\.)?conanpedia\\.com)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://www.conanpedia.com/"
+		},
+		{
+			"name": "anothereden.wiki",
+			"regex": "((?:www\\.)?anothereden\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://anothereden.wiki/"
+		},
+		{
+			"name": "bluearchive.wiki",
+			"regex": "(bluearchive\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://bluearchive.wiki/w/"
+		},
+		{
+			"name": "fatt.wiki",
+			"regex": "((?:www\\.)?fatt\\.wiki)",
+			"articlePath": "/view/",
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://fatt.wiki/wiki/"
+		},
+		{
+			"name": "tolkiengateway.net",
+			"regex": "((?:www\\.)?tolkiengateway\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://tolkiengateway.net/w/"
+		},
+		{
+			"name": "ardapedia.org",
+			"regex": "((?:www\\.)?ardapedia\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://www.ardapedia.org/w/"
+		},
+		{
+			"name": "kontu.wiki",
+			"regex": "((?:www\\.)?kontu\\.wiki)",
+			"articlePath": "/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://kontu.wiki/w/"
+		},
+		{
+			"name": "mrlove.wiki",
+			"regex": "(mrlove\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://mrlove.wiki/w/",
+			"wikiFarm": "miraheze",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
+			"name": "tot.wiki",
+			"regex": "((?:www\\.)?tot\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://tot.wiki/"
 		},
 		{
 			"name": "liquipedia.net",
