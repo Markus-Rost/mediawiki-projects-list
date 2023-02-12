@@ -243,7 +243,8 @@
 			"regex": "((?:www\\.)?barotraumagame\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/baro-wiki/",
-			"fullScriptPath": "https://barotraumagame.com/baro-wiki/"
+			"fullScriptPath": "https://barotraumagame.com/baro-wiki/",
+			"note": "Requires cookies to be accessed."
 		},
 		{
 			"name": "confrontation.wiki",
