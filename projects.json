@@ -1320,13 +1320,6 @@
 			"fullScriptPath": "https://simpsonspedia.net/"
 		},
 		{
-			"name": "info.sonicretro.org",
-			"regex": "(info\\.sonicretro\\.org)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://info.sonicretro.org/"
-		},
-		{
 			"name": "necretro.org",
 			"regex": "(necretro\\.org)",
 			"articlePath": "/",
