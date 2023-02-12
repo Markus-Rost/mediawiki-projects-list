@@ -1344,13 +1344,6 @@
 			"fullScriptPath": "https://necretro.org/"
 		},
 		{
-			"name": "retrocdn.net",
-			"regex": "((?:www\\.)?retrocdn\\.net)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://retrocdn.net/"
-		},
-		{
 			"name": "banglapedia.org",
 			"regex": "((en|bn)\\.banglapedia\\.org)",
 			"articlePath": "/index.php/",
