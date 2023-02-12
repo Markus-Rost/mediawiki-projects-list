@@ -1320,13 +1320,6 @@
 			"fullScriptPath": "https://simpsonspedia.net/"
 		},
 		{
-			"name": "necretro.org",
-			"regex": "(necretro\\.org)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://necretro.org/"
-		},
-		{
 			"name": "banglapedia.org",
 			"regex": "((en|bn)\\.banglapedia\\.org)",
 			"articlePath": "/index.php/",
