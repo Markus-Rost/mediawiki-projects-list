@@ -1327,16 +1327,6 @@
 			"fullScriptPath": "https://info.sonicretro.org/"
 		},
 		{
-			"name": "segaretro.org",
-			"regex": "((?:www\\.)?segaretro\\.org)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://segaretro.org/",
-			"extensions": [
-				"Cargo"
-			]
-		},
-		{
 			"name": "necretro.org",
 			"regex": "(necretro\\.org)",
 			"articlePath": "/",
