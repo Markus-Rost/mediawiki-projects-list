@@ -1888,7 +1888,7 @@
 			"fullScriptPath": "https://anothereden.wiki/"
 		},
 		{
-			"name": "en.miki.community",
+			"name": "miki.community",
 			"regex": "((?:en\\.)?miki\\.community)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
