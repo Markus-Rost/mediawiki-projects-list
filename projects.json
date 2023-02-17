@@ -1888,6 +1888,13 @@
 			"fullScriptPath": "https://anothereden.wiki/"
 		},
 		{
+			"name": "en.miki.community",
+			"regex": "(en\\.miki\\.community)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://en.miki.community/w/"
+		},
+		{
 			"name": "bluearchive.wiki",
 			"regex": "(bluearchive\\.wiki)",
 			"articlePath": "/wiki/",
