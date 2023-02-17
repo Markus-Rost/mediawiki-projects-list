@@ -1949,6 +1949,48 @@
 			"fullScriptPath": "https://tot.wiki/"
 		},
 		{
+			"name": "minecove.net",
+			"regex": "((?:www\\.)?minecove\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://minecove.net/w/"
+		},
+		{
+			"name": "x-journal.net",
+			"regex": "((?:www\\.)?x-journal\\.net)",
+			"articlePath": "/Wiki/index.php?title=",
+			"scriptPath": "/Wiki/",
+			"fullScriptPath": "https://x-journal.net/Wiki/"
+		},
+		{
+			"name": "wiki.producers-and-traders.de",
+			"regex": "(wiki\\.producers-and-traders\\.de)",
+			"articlePath": "/index.php?title=",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.producers-and-traders.de/"
+		},
+		{
+			"name": "wiki.kynseed.com",
+			"regex": "(wiki\\.kynseed\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.kynseed.com/"
+		},
+		{
+			"name": "wiki.rinkofhonor.com",
+			"regex": "(wiki\\.rinkofhonor\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.rinkofhonor.com/"
+		},
+		{
+			"name": "wiki.insanityflyff.com",
+			"regex": "(wiki\\.insanityflyff\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.insanityflyff.com/"
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
