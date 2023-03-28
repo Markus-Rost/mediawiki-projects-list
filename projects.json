@@ -1991,6 +1991,130 @@
 			"fullScriptPath": "https://wiki.insanityflyff.com/"
 		},
 		{
+			"name": "stowiki.net",
+			"regex": "((?:www\\.)?stowiki\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://stowiki.net/w/"
+		},
+		{
+			"name": "lexicanum.com",
+			"regex": "(([a-z\\d-]{1,50})\\.lexicanum\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/mediawiki/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.lexicanum.com/mediawiki/"
+				]
+			}
+		},
+		{
+			"name": "dnd-wiki.org",
+			"regex": "(dnd-wiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://dnd-wiki.org/w/"
+		},
+		{
+			"name": "wiki.twcenter.net",
+			"regex": "(wiki\\.twcenter\\.net)",
+			"articlePath": "/index.php?title=",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.twcenter.net/"
+		},
+		{
+			"name": "incels.wiki",
+			"regex": "((?:www\\.)?incels\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://incels.wiki/"
+		},
+		{
+			"name": "wiki.mushureport.com",
+			"regex": "(wiki\\.mushureport\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.mushureport.com/"
+		},
+		{
+			"name": "marcaargentea.net",
+			"regex": "((?:www\\.)?marcaargentea\\.net)",
+			"articlePath": "/wiki/index.php/",
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://www.marcaargentea.net/wiki/"
+		},
+		{
+			"name": "old-games.ru",
+			"regex": "((?:www\\.)?old-games\\.ru)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://www.old-games.ru/wiki/"
+		},
+		{
+			"name": "kovopedia.com",
+			"regex": "((?:www\\.)?kovopedia\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://kovopedia.com/"
+		},
+		{
+			"name": "enpedia.rxy.jp",
+			"regex": "(enpedia\\.rxy\\.jp)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://enpedia.rxy.jp/w/"
+		},
+		{
+			"name": "place-wiki.stefanocoding.me",
+			"regex": "(place-wiki\\.stefanocoding\\.me)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://place-wiki.stefanocoding.me/"
+		},
+		{
+			"name": "wiki.london2038.com",
+			"regex": "(wiki\\.london2038\\.com)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.london2038.com/"
+		},
+		{
+			"name": "quelmarwiki.com",
+			"regex": "(quelmarwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://quelmarwiki.com/"
+		},
+		{
+			"name": "sindenwiki.org",
+			"regex": "((?:www\\.)?sindenwiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://www.sindenwiki.org/"
+		},
+		{
+			"name": "love2d.org",
+			"regex": "((?:www\\.)?love2d\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://love2d.org/w/"
+		},
+		{
+			"name": "otherkin.wiki",
+			"regex": "((?:www\\.)?otherkin\\.wiki)",
+			"articlePath": "/o/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://otherkin.wiki/w/"
+		},
+		{
+			"name": "transminecraft.gay",
+			"regex": "((?:www\\.)?transminecraft\\.gay)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://transminecraft.gay/w/"
+		},
+		{
 			"name": "liquipedia.net",
 			"regex": "((?:www\\.)?liquipedia\\.net/([a-z\\d]{1,50}))",
 			"articlePath": "/",
