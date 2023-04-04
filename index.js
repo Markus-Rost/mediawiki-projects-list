@@ -56,10 +56,27 @@ const functionCache = {
 };
 
 /**
- * List of MediaWiki projects
- * @type {WikiProject[]}
+ * @param {Map<string, mapValueType>} map 
+ * @param {string} keyString 
+ * @returns {?mapValueType}
+ * @template mapValueType
  */
-const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
+function getMapValue(map, keyString) {
+	if ( !keyString ) return null;
+	let parts = keyString.split('.');
+	while ( parts.length > 0 ) {
+		let key = parts.join('.');
+		if ( map.has(key) ) return map.get(key);
+		parts.shift();
+	}
+	return null;
+}
+
+/**
+ * Map of MediaWiki projects
+ * @type {Map<string, WikiProject>}
+ */
+const wikiProjects = new Map(PROJECTS.wikiProjects.map( wikiProject => {
 	if ( wikiProject.idString ) {
 		wikiProject.idString.separator ??= wikiProjectSchema.idString.properties.separator.default;
 		wikiProject.idString.direction ??= wikiProjectSchema.idString.properties.direction.default;
@@ -69,22 +86,40 @@ const wikiProjects = PROJECTS.wikiProjects.map( wikiProject => {
 	wikiProject.extensions ??= wikiProjectSchema.extensions.default.slice();
 	wikiProject.urlSpaceReplacement ??= wikiProjectSchema.urlSpaceReplacement.default;
 	wikiProject.note ??= wikiProjectSchema.note.default;
-	return wikiProject;
-} );
+	return [wikiProject.name, wikiProject];
+} ));
 
 /**
- * List of frontend proxies
- * @type {FrontendProxy[]}
+ * Map of frontend proxies
+ * @type {Map<string, FrontendProxy>}
  */
-const frontendProxies = PROJECTS.frontendProxies.map( frontendProxy => {
+const frontendProxies = new Map(PROJECTS.frontendProxies.map( frontendProxy => {
 	if ( frontendProxy.idString ) {
 		frontendProxy.idString.separator ??= frontendProxySchema.idString.properties.separator.default;
 		frontendProxy.idString.direction ??= frontendProxySchema.idString.properties.direction.default;
 	}
 	frontendProxy.relativeFix ??= frontendProxySchema.relativeFix.default;
 	frontendProxy.note ??= frontendProxySchema.note.default;
-	return frontendProxy;
-} );
+	return [frontendProxy.name, frontendProxy];
+} ));
+
+/**
+ * Get a MediaWiki project by domain hostname
+ * @param {string} hostname 
+ * @returns {?WikiProject}
+ */
+function getWikiProject(hostname) {
+	return getMapValue(wikiProjects, hostname);
+}
+
+/**
+ * Get a frontend proxy by domain hostname
+ * @param {string} hostname 
+ * @returns {?FrontendProxy}
+ */
+function getFrontendProxy(hostname) {
+	return getMapValue(frontendProxies, hostname);
+}
 
 /**
  * 
@@ -94,7 +129,7 @@ const frontendProxies = PROJECTS.frontendProxies.map( frontendProxy => {
 function inputToWikiProject(input) {
 	if ( functionCache.inputToWikiProject.has(input) ) return structuredClone(functionCache.inputToWikiProject.get(input));
 	let result = null;
-	let wikiProject = wikiProjects.find( wikiProject => input.split('/').slice(0, 3).some( part => part.endsWith( wikiProject.name ) ) );
+	let wikiProject = getWikiProject(input.split('/').slice(0, 3).find( part => part && part.includes( '.' ) ));
 	if ( wikiProject ) {
 		let articlePath = ( wikiProject.regexPaths ? '/' : wikiProject.articlePath.split('?')[0] ).replace(/[.*+?^${}()|\[\]\\]/g, '\\$&');
 		let scriptPath = ( wikiProject.regexPaths ? '/' : wikiProject.scriptPath ).replace(/[.*+?^${}()|\[\]\\]/g, '\\$&');
@@ -133,10 +168,10 @@ function inputToWikiProject(input) {
 function urlToIdString(url) {
 	if ( functionCache.urlToIdString.has(url.href) ) return functionCache.urlToIdString.get(url.href);
 	let result = null;
-	/** @type {WikiProject|FrontendProxy|undefined} */
-	let project = wikiProjects.find( wikiProject => wikiProject.idString && url.hostname.endsWith( wikiProject.name ) );
-	if ( !project ) project = frontendProxies.find( frontendProxy => frontendProxy.idString && url.hostname.endsWith( frontendProxy.name ) );
-	if ( project ) {
+	/** @type {?WikiProject|FrontendProxy} */
+	let project = getWikiProject(url.hostname);
+	if ( !project ) project = getFrontendProxy(url.hostname);
+	if ( project?.idString ) {
 		let regex = url.href.match( new RegExp( project.regex ) )?.slice(2);
 		if ( regex?.length ) {
 			if ( project.idString.direction === 'desc' ) regex.reverse();
@@ -160,8 +195,8 @@ function idStringToUrl(idString, projectName) {
 		return ( result ? new URL(result) : result );
 	}
 	let result = null;
-	let project = wikiProjects.find( wikiProject => wikiProject.idString && wikiProject.name === projectName )?.idString;
-	if ( !project ) project = frontendProxies.find( frontendProxy => frontendProxy.idString && frontendProxy.name === projectName )?.idString;
+	let project = getWikiProject(projectName)?.idString;
+	if ( !project ) project = getFrontendProxy(projectName)?.idString;
 	if ( project ) {
 		let regex = idString.match( new RegExp( '^' + project.regex + '$' ) )?.[1].split(project.separator);
 		if ( regex && regex.length <= project.scriptPaths.length ) {
@@ -180,7 +215,7 @@ function idStringToUrl(idString, projectName) {
 function inputToFrontendProxy(input) {
 	if ( functionCache.inputToFrontendProxy.has(input) ) return structuredClone(functionCache.inputToFrontendProxy.get(input));
 	let result = null;
-	let frontendProxy = frontendProxies.find( frontendProxy => input.split('/').slice(0, 3).some( part => part.endsWith( frontendProxy.name ) ) );
+	let frontendProxy = getFrontendProxy(input.split('/').slice(0, 3).find( part => part && part.includes( '.' ) ));
 	if ( frontendProxy ) {
 		let regex = input.match( new RegExp( frontendProxy.regex ) );
 		if ( regex ) {
@@ -209,7 +244,7 @@ function urlToFix(url) {
 	let hostname = url.split('/')[2];
 	if ( functionCache.urlToFix.has(hostname) ) return functionCache.urlToFix.get(hostname);
 	let result = null;
-	let frontendProxy = frontendProxies.find( frontendProxy => hostname.endsWith( frontendProxy.name ) );
+	let frontendProxy = getFrontendProxy(hostname);
 	if ( frontendProxy ) {
 		let splitLength = frontendProxy.namePath.split('/').length;
 		let querykeys = frontendProxy.namePath.split('?').slice(1).join('?').split('&').flatMap( query => {
@@ -264,6 +299,8 @@ function urlToFix(url) {
 module.exports = {
 	wikiProjects,
 	frontendProxies,
+	getWikiProject,
+	getFrontendProxy,
 	inputToWikiProject,
 	urlToIdString,
 	idStringToUrl,

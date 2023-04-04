@@ -64,11 +64,17 @@ declare module 'mediawiki-projects-list' {
 		note: string | null;
 	};
 
-	/** List of MediaWiki projects */
-	export const wikiProjects: WikiProject[];
+	/** Map of MediaWiki projects */
+	export const wikiProjects: Map<string, WikiProject>;
 
-	/** List of frontend proxies */
-	export const frontendProxies: FrontendProxy[];
+	/** Map of frontend proxies */
+	export const frontendProxies: Map<string, FrontendProxy>;
+
+	/** Get a MediaWiki project by domain hostname */
+	export function getWikiProject(hostname: string): WikiProject | null;
+
+	/** Get a frontend proxy by domain hostname */
+	export function getFrontendProxy(hostname: string): FrontendProxy | null;
 
 	export function inputToWikiProject(input: string): {
 		fullArticlePath: string;

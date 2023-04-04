@@ -1,6 +1,6 @@
 {
   "name": "mediawiki-projects-list",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "type": "commonjs",
   "description": "List of MediaWiki projects for use in discord-wiki-bot",
   "main": "index.js",
