@@ -172,7 +172,7 @@ function urlToIdString(url) {
 	let project = getWikiProject(url.hostname);
 	if ( !project ) project = getFrontendProxy(url.hostname);
 	if ( project?.idString ) {
-		let regex = url.href.match( new RegExp( project.regex ) )?.slice(2);
+		let regex = url.href.match( new RegExp( project.regex ) )?.slice(2).filter( part => part );
 		if ( regex?.length ) {
 			if ( project.idString.direction === 'desc' ) regex.reverse();
 			result = regex.join(project.idString.separator);
