@@ -1837,6 +1837,13 @@
 			"fullScriptPath": "https://wiki.ポケモン.com/w/"
 		},
 		{
+			"name": "wikiapiary.com",
+			"regex": "((?:www\\.)?wikiapiary\\.com",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://wikiapiary.com/w/"
+		},
+		{
 			"name": "wikibooks.org",
 			"regex": "((?:([a-z\\d-]{1,50})\\.)?(?:m\\.)?wikibooks\\.org)",
 			"articlePath": "/wiki/",
@@ -2126,13 +2133,6 @@
 			"extensions": [
 				"Cargo"
 			]
-		},
-		{
-			"name": "wikiapiary.com",
-			"regex": "((?:www\\.)?wikiapiary\\.com",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://wikiapiary.com/w/"
 		}
 	]
 }
