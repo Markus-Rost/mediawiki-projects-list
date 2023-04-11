@@ -1838,7 +1838,7 @@
 		},
 		{
 			"name": "wikiapiary.com",
-			"regex": "((?:www\\.)?wikiapiary\\.com",
+			"regex": "((?:www\\.)?wikiapiary\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://wikiapiary.com/w/"
