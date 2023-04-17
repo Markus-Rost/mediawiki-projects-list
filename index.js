@@ -15,7 +15,7 @@ const PROJECTS = require('./projects.json');
  * @property {string} idString.regex - Regex to match the id string
  * @property {string[]} idString.scriptPaths - How to turn the group matches of the id string regex into an URL to the script path, index based on group matches
  * @property {boolean} regexPaths - Whether the paths include matches of the regex
- * @property {?("biligame"|"fandom"|"huijiwiki"|"miraheze"|"shoutwiki"|"wiki.gg"|"wikimedia")} wikiFarm - Wiki farm of the project
+ * @property {?("biligame"|"fandom"|"huijiwiki"|"miraheze"|"shoutwiki"|"wiki.gg"|"wikiforge"|"wikimedia")} wikiFarm - Wiki farm of the project
  * @property {("Cargo"|"CentralAuth"|"OAuth")[]} extensions - List of extensions providing useful API endpoints
  * @property {string} urlSpaceReplacement - Replacement for spaces in the article URL
  * @property {?string} note - Note about the specific project

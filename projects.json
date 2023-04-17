@@ -321,7 +321,7 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://dcmultiversewiki.com/w/",
-			"wikiFarm": "miraheze",
+			"wikiFarm": "wikiforge",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
@@ -1902,6 +1902,23 @@
 			"articlePath": "/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wikidragonquest.fr/"
+		},
+		{
+			"name": "wikiforge.net",
+			"regex": "(([a-z\\d-]{1,50})\\.wikiforge\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.wikiforge.net/w/"
+				]
+			},
+			"wikiFarm": "wikiforge",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
 		},
 		{
 			"name": "wikihow.com",
