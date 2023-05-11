@@ -1656,7 +1656,10 @@
 					"https://$2.wiki.gg/$1/"
 				]
 			},
-			"wikiFarm": "wiki.gg"
+			"wikiFarm": "wiki.gg",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "wiki.guildwars.com",
