@@ -1400,6 +1400,23 @@
 			"fullScriptPath": "https://tcrf.net/"
 		},
 		{
+			"name": "telepedia.net",
+			"regex": "(([a-z\\d-]{1,50})\\.telepedia\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.telepedia.net/"
+				]
+			},
+			"wikiFarm": "telepedia",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "thecyclefrontier.wiki",
 			"regex": "((?:www\\.)?thecyclefrontier\\.wiki)",
 			"articlePath": "/wiki/",
