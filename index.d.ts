@@ -1,5 +1,20 @@
 declare module 'mediawiki-projects-list' {
 
+	/** A wiki farm */
+	export type WikiFarm = (
+		"biligame" | 
+		"fandom" | 
+		"huijiwiki" | 
+		"miraheze" | 
+		"shoutwiki" | 
+		"telepedia" | 
+		"wiki.gg" | 
+		"wikiforge" | 
+		"wikimedia" | 
+		"wikitide" | 
+		null
+	);
+
 	/** A MediaWiki project */
 	export type WikiProject = {
 		/** Hostname of the project */
@@ -26,7 +41,7 @@ declare module 'mediawiki-projects-list' {
 		/** Whether the paths include matches of the regex */
 		regexPaths: boolean;
 		/** Wiki farm of the project */
-		wikiFarm: ("biligame" | "fandom" | "huijiwiki" | "miraheze" | "shoutwiki" | "telepedia" | "wiki.gg" | "wikiforge" | "wikimedia") | null;
+		wikiFarm: WikiFarm;
 		/** List of extensions providing useful API endpoints */
 		extensions: ("Cargo" | "CentralAuth" | "OAuth")[];
 		/** Replacement for spaces in the article URL */

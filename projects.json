@@ -2055,6 +2055,23 @@
 			]
 		},
 		{
+			"name": "wikitide.com",
+			"regex": "(([a-z\\d-]{1,50})\\.wikitide\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.wikitide.com/w/"
+				]
+			},
+			"wikiFarm": "wikitide",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "wikiversity.org",
 			"regex": "((?:([a-z\\d-]{1,50})\\.)?(?:m\\.)?wikiversity\\.org)",
 			"articlePath": "/wiki/",
