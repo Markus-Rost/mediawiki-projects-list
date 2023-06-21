@@ -6,6 +6,7 @@ declare module 'mediawiki-projects-list' {
 		"fandom" | 
 		"huijiwiki" | 
 		"miraheze" | 
+		"mywikis" | 
 		"shoutwiki" | 
 		"telepedia" | 
 		"wiki.gg" | 

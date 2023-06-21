@@ -58,7 +58,8 @@
 			"regex": "((?:www\\.)?7kingdoms\\.ru)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://7kingdoms.ru/w/"
+			"fullScriptPath": "https://7kingdoms.ru/w/",
+			"note": "Requires cookies and JS to be accessed."
 		},
 		{
 			"name": "amiibopedia.com",
@@ -539,13 +540,6 @@
 			]
 		},
 		{
-			"name": "flyff-universe-wiki.com",
-			"regex": "(flyff-universe-wiki\\.com)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://flyff-universe-wiki.com/"
-		},
-		{
 			"name": "gbf.wiki",
 			"regex": "((?:www\\.)?gbf\\.wiki)",
 			"articlePath": "/",
@@ -558,9 +552,14 @@
 		{
 			"name": "glitchcity.wiki",
 			"regex": "((?:www\\.)?glitchcity\\.wiki)",
-			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://glitchcity.wiki/"
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://glitchcity.wiki/w/",
+			"wikiFarm": "miraheze",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
 		},
 		{
 			"name": "goldensunwiki.net",
@@ -734,18 +733,6 @@
 			}
 		},
 		{
-			"name": "lgbtqia.wiki",
-			"regex": "((?:www\\.)?lgbtqia\\.wiki)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://www.lgbtqia.wiki/w/",
-			"wikiFarm": "miraheze",
-			"extensions": [
-				"CentralAuth",
-				"OAuth"
-			]
-		},
-		{
 			"name": "librewiki.net",
 			"regex": "(librewiki\\.net)",
 			"articlePath": "/wiki/",
@@ -769,8 +756,8 @@
 			"name": "lostmediawiki.com",
 			"regex": "((?:www\\.)?lostmediawiki\\.com)",
 			"articlePath": "/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://lostmediawiki.com/"
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://lostmediawiki.com/w/"
 		},
 		{
 			"name": "lotro-wiki.com",
@@ -830,6 +817,20 @@
 				"CentralAuth",
 				"OAuth"
 			]
+		},
+		{
+			"name": "medievil.wiki",
+			"regex": "((?:www\\.)?medievil\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://medievil.wiki/"
+		},
+		{
+			"name": "megatenwiki.com",
+			"regex": "((?:www\\.)?megatenwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://megatenwiki.com/"
 		},
 		{
 			"name": "metapedia.org",
@@ -932,23 +933,37 @@
 			}
 		},
 		{
-			"name": "mrlove.wiki",
-			"regex": "(mrlove\\.wiki)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://mrlove.wiki/w/",
-			"wikiFarm": "miraheze",
-			"extensions": [
-				"CentralAuth",
-				"OAuth"
-			]
-		},
-		{
 			"name": "mutecity.org",
 			"regex": "((?:www\\.)?mutecity\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://mutecity.org/w/"
+		},
+		{
+			"name": "mywikis.eu",
+			"regex": "(([a-z\\d-]{1,50})\\.mywikis\\.eu)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.mywikis.eu/w/"
+				]
+			},
+			"wikiFarm": "mywikis"
+		},
+		{
+			"name": "mywikis.wiki",
+			"regex": "(([a-z\\d-]{1,50})\\.mywikis\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.mywikis.wiki/w/"
+				]
+			},
+			"wikiFarm": "mywikis"
 		},
 		{
 			"name": "newchallenger.net",
@@ -1006,6 +1021,13 @@
 					"https://$1.paradoxwikis.com/"
 				]
 			}
+		},
+		{
+			"name": "paxdeimmo.wiki",
+			"regex": "((?:www\\.)?paxdeimmo\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://paxdeimmo.wiki/"
 		},
 		{
 			"name": "pcgamingwiki.com",
@@ -1101,16 +1123,11 @@
 		},
 		{
 			"name": "polandballwiki.com",
-			"regex": "((?:([a-z-]{2,12})\\.)?polandballwiki\\.com)",
+			"regex": "((?:www\\.)?polandballwiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"idString": {
-				"regex": "([a-z-]{2,12})",
-				"scriptPaths": [
-					"https://$1.polandballwiki.com/w/"
-				]
-			},
-			"wikiFarm": "miraheze",
+			"fullScriptPath": "https://www.polandballwiki.com/w/",
+			"wikiFarm": "wikitide",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
@@ -1155,6 +1172,13 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://quelmarwiki.com/"
+		},
+		{
+			"name": "rammwiki.net",
+			"regex": "((?:www\\.)?rammwiki\\.net)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/www/w/",
+			"fullScriptPath": "https://rammwiki.net/www/w/"
 		},
 		{
 			"name": "rarewiki.com",
@@ -1518,6 +1542,13 @@
 			"fullScriptPath": "https://ukikipedia.net/mediawiki/"
 		},
 		{
+			"name": "vetpetmon.com",
+			"regex": "((?:www\\.)?vetpetmon\\.com)",
+			"articlePath": "/snazpedia/index.php/",
+			"scriptPath": "/snazpedia/",
+			"fullScriptPath": "https://www.vetpetmon.com/snazpedia/"
+		},
+		{
 			"name": "vikidia.org",
 			"regex": "((?:([a-z-]{2,12})\\.)vikidia\\.org)",
 			"articlePath": "/wiki/",
@@ -1619,6 +1650,20 @@
 			"wikiFarm": "biligame"
 		},
 		{
+			"name": "wiki.bravofleet.com",
+			"regex": "(wiki\\.bravofleet\\.com)",
+			"articlePath": "/index.php/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.bravofleet.com/"
+		},
+		{
+			"name": "wiki.eveuniversity.org",
+			"regex": "(wiki\\.eveuniversity\\.org)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.eveuniversity.org/"
+		},
+		{
 			"name": "wiki.factorio.com",
 			"regex": "(wiki\\.factorio\\.com)",
 			"articlePath": "/",
@@ -1714,6 +1759,13 @@
 			"fullScriptPath": "https://wiki.henkaku.xyz/vita/"
 		},
 		{
+			"name": "wiki.holdfastgame.com",
+			"regex": "(wiki\\.holdfastgame\\.com)",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.holdfastgame.com/"
+		},
+		{
 			"name": "wiki.hypixel.net",
 			"regex": "(wiki\\.hypixel\\.net)",
 			"articlePath": "/",
@@ -1740,6 +1792,13 @@
 			"articlePath": "/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.london2038.com/"
+		},
+		{
+			"name": "wiki.mabinogiworld.com",
+			"regex": "(wiki\\.mabinogiworld\\.com)",
+			"articlePath": "/view/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.mabinogiworld.com/"
 		},
 		{
 			"name": "wiki.melvoridle.com",
@@ -1857,11 +1916,19 @@
 			"fullScriptPath": "https://wiki.ポケモン.com/w/"
 		},
 		{
+			"name": "wiki.zorua.top",
+			"regex": "(wiki\\.zorua\\.top)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.zorua.top/"
+		},
+		{
 			"name": "wikiapiary.com",
 			"regex": "((?:www\\.)?wikiapiary\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://wikiapiary.com/w/"
+			"fullScriptPath": "https://wikiapiary.com/w/",
+			"note": "Has Wiki-Bot blocked."
 		},
 		{
 			"name": "wikibooks.org",
