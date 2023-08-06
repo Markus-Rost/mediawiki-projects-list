@@ -1148,13 +1148,6 @@
 			]
 		},
 		{
-			"name": "theportalwiki.com",
-			"regex": "((?:www\\.)?theportalwiki\\.com)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://theportalwiki.com/w/"
-		},
-		{
 			"name": "psdevwiki.com",
 			"regex": "((?:www\\.)?psdevwiki\\.com/([a-z0-9]{1,50}))",
 			"articlePath": "/",
@@ -1481,6 +1474,13 @@
 			"articlePath": "/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://theinfosphere.org/"
+		},
+		{
+			"name": "theportalwiki.com",
+			"regex": "((?:www\\.)?theportalwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://theportalwiki.com/w/"
 		},
 		{
 			"name": "timespinnerwiki.com",
