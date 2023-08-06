@@ -499,7 +499,7 @@
 			"regex": "((?:www\\.)?famiwiki\\.net)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://famiwiki.net/"
+			"fullScriptPath": "https://famiwiki.net/w/"
 		},
 		{
 			"name": "fandom.com",
@@ -1152,7 +1152,7 @@
 			"regex": "((?:www\\.)?theportalwiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://theportalwiki.com/"
+			"fullScriptPath": "https://theportalwiki.com/w/"
 		},
 		{
 			"name": "psdevwiki.com",
@@ -1262,7 +1262,7 @@
 			"regex": "((?:www\\.)?rhwiki\\.net)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://rhwiki.net/"
+			"fullScriptPath": "https://rhwiki.net/w/"
 		},
 		{
 			"name": "runescape.wiki",
