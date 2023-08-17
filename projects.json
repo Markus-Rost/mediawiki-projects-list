@@ -134,8 +134,8 @@
 			"name": "avid.wiki",
 			"regex": "((?:www\\.)?avid\\.wiki)",
 			"articlePath": "/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://www.avid.wiki/w/",
+			"scriptPath": "/1.40/",
+			"fullScriptPath": "https://www.avid.wiki/1.40/",
 			"extensions": [
 				"OAuth"
 			]
@@ -330,8 +330,8 @@
 			"name": "dcmultiversewiki.com",
 			"regex": "((?:www\\.)?dcmultiversewiki\\.com)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://dcmultiversewiki.com/w/",
+			"scriptPath": "/1.40/",
+			"fullScriptPath": "https://dcmultiversewiki.com/1.40/",
 			"extensions": [
 				"OAuth"
 			]
@@ -2035,11 +2035,11 @@
 			"name": "wikiforge.net",
 			"regex": "(([a-z\\d-]{1,50})\\.wikiforge\\.net)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
+			"scriptPath": "/1.40/",
 			"idString": {
 				"regex": "([a-z\\d-]{1,50})",
 				"scriptPaths": [
-					"https://$1.wikiforge.net/w/"
+					"https://$1.wikiforge.net/1.40/"
 				]
 			},
 			"extensions": [
