@@ -131,6 +131,16 @@
 			]
 		},
 		{
+			"name": "avid.wiki",
+			"regex": "((?:www\\.)?avid\\.wiki)",
+			"articlePath": "/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://www.avid.wiki/w/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "awoiaf.westeros.org",
 			"regex": "(awoiaf\\.westeros\\.org)",
 			"articlePath": "/index.php/",
@@ -322,9 +332,7 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://dcmultiversewiki.com/w/",
-			"wikiFarm": "wikiforge",
 			"extensions": [
-				"CentralAuth",
 				"OAuth"
 			]
 		},
@@ -2034,9 +2042,7 @@
 					"https://$1.wikiforge.net/w/"
 				]
 			},
-			"wikiFarm": "wikiforge",
 			"extensions": [
-				"CentralAuth",
 				"OAuth"
 			]
 		},

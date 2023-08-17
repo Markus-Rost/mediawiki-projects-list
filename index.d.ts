@@ -10,7 +10,6 @@ declare module 'mediawiki-projects-list' {
 		"shoutwiki" | 
 		"telepedia" | 
 		"wiki.gg" | 
-		"wikiforge" | 
 		"wikimedia" | 
 		"wikitide" | 
 		null
