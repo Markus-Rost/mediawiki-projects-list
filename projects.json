@@ -1611,6 +1611,18 @@
 			"fullScriptPath": "https://wavu.wiki/w/"
 		},
 		{
+			"name": "weirdgloop.org",
+			"regex": "(([a-z-]{2,12})\\.weirdgloop\\.org)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.weirdgloop.org/"
+				]
+			}
+		},
+		{
 			"name": "westeros.ir",
 			"regex": "((?:www\\.)?westeros\\.ir)",
 			"articlePath": "/wiki/index.php?title=",
