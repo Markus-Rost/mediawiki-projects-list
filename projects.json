@@ -912,6 +912,16 @@
 			"fullScriptPath": "https://minecove.net/w/"
 		},
 		{
+			"name": "minecraft.wiki",
+			"regex": "((?:(?:en|www)\\.)?minecraft\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://minecraft.wiki/w/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "miragerealms.co.uk",
 			"regex": "((?:www\\.)?miragerealms\\.co\\.uk)",
 			"articlePath": "/wiki/index.php/",
@@ -1275,7 +1285,10 @@
 				"scriptPaths": [
 					"https://$1.runescape.wiki/"
 				]
-			}
+			},
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "sanriowiki.com",
@@ -1620,7 +1633,10 @@
 				"scriptPaths": [
 					"https://$1.weirdgloop.org/"
 				]
-			}
+			},
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "westeros.ir",
