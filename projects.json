@@ -916,7 +916,7 @@
 			"regex": "((?:(?:en|www)\\.)?minecraft\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://minecraft.wiki/w/",
+			"fullScriptPath": "https://minecraft.wiki/",
 			"extensions": [
 				"OAuth"
 			]
