@@ -555,6 +555,13 @@
 			]
 		},
 		{
+			"name": "fraternityofshadows.com",
+			"regex": "((?:www\\.)?fireemblemwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://fraternityofshadows.com/w/"
+		},
+		{
 			"name": "gbf.wiki",
 			"regex": "((?:www\\.)?gbf\\.wiki)",
 			"articlePath": "/",
