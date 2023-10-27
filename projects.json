@@ -556,7 +556,7 @@
 		},
 		{
 			"name": "fraternityofshadows.com",
-			"regex": "((?:www\\.)?fireemblemwiki\\.com)",
+			"regex": "((?:www\\.)?fraternityofshadows\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://fraternityofshadows.com/w/"
