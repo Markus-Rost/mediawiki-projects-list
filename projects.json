@@ -131,16 +131,6 @@
 			]
 		},
 		{
-			"name": "avid.wiki",
-			"regex": "((?:www\\.)?avid\\.wiki)",
-			"articlePath": "/",
-			"scriptPath": "/1.40/",
-			"fullScriptPath": "https://www.avid.wiki/1.40/",
-			"extensions": [
-				"OAuth"
-			]
-		},
-		{
 			"name": "awoiaf.westeros.org",
 			"regex": "(awoiaf\\.westeros\\.org)",
 			"articlePath": "/index.php/",
@@ -325,16 +315,6 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://www.dandwiki.com/w/"
-		},
-		{
-			"name": "dcmultiversewiki.com",
-			"regex": "((?:www\\.)?dcmultiversewiki\\.com)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/1.40/",
-			"fullScriptPath": "https://dcmultiversewiki.com/1.40/",
-			"extensions": [
-				"OAuth"
-			]
 		},
 		{
 			"name": "ddowiki.com",
@@ -650,6 +630,13 @@
 			"fullScriptPath": "https://hiddenpalace.org/w/"
 		},
 		{
+			"name": "hollowknight.wiki",
+			"regex": "((?:www\\.)?hollowknight\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/mw/",
+			"fullScriptPath": "https://hollowknight.wiki/mw/"
+		},
+		{
 			"name": "huijiwiki.com",
 			"regex": "((?:([a-z\\d-]{1,50})\\.)?huijiwiki\\.com)",
 			"articlePath": "/wiki/",
@@ -920,10 +907,15 @@
 		},
 		{
 			"name": "minecraft.wiki",
-			"regex": "((?:(?:en|www)\\.)?minecraft\\.wiki)",
+			"regex": "((?:([a-z-]{2,12})\\.)?minecraft\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://minecraft.wiki/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.minecraft.wiki/"
+				]
+			},
 			"extensions": [
 				"OAuth"
 			]
@@ -1034,13 +1026,6 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/wiki/",
 			"fullScriptPath": "https://www.old-games.ru/wiki/"
-		},
-		{
-			"name": "otherkin.wiki",
-			"regex": "((?:www\\.)?otherkin\\.wiki)",
-			"articlePath": "/o/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://otherkin.wiki/w/"
 		},
 		{
 			"name": "paradoxwikis.com",
@@ -1209,8 +1194,8 @@
 			"name": "quelmarwiki.com",
 			"regex": "(quelmarwiki\\.com)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://quelmarwiki.com/"
+			"scriptPath": "/wiki/",
+			"fullScriptPath": "https://quelmarwiki.com/wiki/"
 		},
 		{
 			"name": "rammwiki.net",
@@ -1554,13 +1539,6 @@
 					"https://$1.touhouwiki.net/"
 				]
 			}
-		},
-		{
-			"name": "toweroffantasy.wiki",
-			"regex": "((?:www\\.)?toweroffantasy\\.wiki)",
-			"articlePath": "/w/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://toweroffantasy.wiki/"
 		},
 		{
 			"name": "translatewiki.net",
@@ -1987,13 +1965,6 @@
 			"fullScriptPath": "https://wiki.ポケモン.com/w/"
 		},
 		{
-			"name": "wiki.zorua.top",
-			"regex": "(wiki\\.zorua\\.top)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://wiki.zorua.top/"
-		},
-		{
 			"name": "wikiapiary.com",
 			"regex": "((?:www\\.)?wikiapiary\\.com)",
 			"articlePath": "/wiki/",
@@ -2297,6 +2268,13 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://www.xenoserieswiki.org/w/"
+		},
+		{
+			"name": "youshou.wiki",
+			"regex": "(youshou\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://youshou.wiki/"
 		},
 		{
 			"name": "yugipedia.com",
