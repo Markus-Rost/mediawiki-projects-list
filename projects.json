@@ -2167,14 +2167,14 @@
 			]
 		},
 		{
-			"name": "wikitide.com",
-			"regex": "(([a-z\\d-]{1,50})\\.wikitide\\.com)",
+			"name": "wikitide.org",
+			"regex": "(([a-z\\d-]{1,50})\\.wikitide\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"idString": {
 				"regex": "([a-z\\d-]{1,50})",
 				"scriptPaths": [
-					"https://$1.wikitide.com/w/"
+					"https://$1.wikitide.org/w/"
 				]
 			},
 			"wikiFarm": "wikitide",
