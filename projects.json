@@ -1548,13 +1548,6 @@
 			"fullScriptPath": "https://translatewiki.net/w/"
 		},
 		{
-			"name": "transminecraft.gay",
-			"regex": "((?:www\\.)?transminecraft\\.gay)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://transminecraft.gay/w/"
-		},
-		{
 			"name": "triforcewiki.com",
 			"regex": "((?:www\\.)?triforcewiki\\.com)",
 			"articlePath": "/wiki/",
