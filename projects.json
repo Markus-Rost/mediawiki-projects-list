@@ -1451,6 +1451,13 @@
 			"fullScriptPath": "https://switchbrew.org/w/"
 		},
 		{
+			"name": "tardis.wiki",
+			"regex": "((?:www\\.)?tardis\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://tardis.wiki/w/"
+		},
+		{
 			"name": "tcrf.net",
 			"regex": "((?:www\\.)?tcrf\\.net)",
 			"articlePath": "/",
