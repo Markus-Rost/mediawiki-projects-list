@@ -11,7 +11,6 @@ declare module 'mediawiki-projects-list' {
 		"telepedia" | 
 		"wiki.gg" | 
 		"wikimedia" | 
-		"wikitide" | 
 		null
 	);
 

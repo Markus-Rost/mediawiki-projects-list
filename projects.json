@@ -1151,7 +1151,7 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://www.polandballwiki.com/w/",
-			"wikiFarm": "wikitide",
+			"wikiFarm": "miraheze",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
@@ -2168,23 +2168,6 @@
 				]
 			},
 			"wikiFarm": "wikimedia",
-			"extensions": [
-				"CentralAuth",
-				"OAuth"
-			]
-		},
-		{
-			"name": "wikitide.org",
-			"regex": "(([a-z\\d-]{1,50})\\.wikitide\\.org)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"idString": {
-				"regex": "([a-z\\d-]{1,50})",
-				"scriptPaths": [
-					"https://$1.wikitide.org/w/"
-				]
-			},
-			"wikiFarm": "wikitide",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
