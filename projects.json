@@ -1250,7 +1250,7 @@
 		},
 		{
 			"name": "rekowiki.org",
-			"regex": "(rekowiki\\.org)",
+			"regex": "((?:www\\.)?rekowiki\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://rekowiki.org/w/"
