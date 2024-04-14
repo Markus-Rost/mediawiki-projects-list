@@ -1249,6 +1249,13 @@
 			]
 		},
 		{
+			"name": "rekowiki.org",
+			"regex": "(rekowiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://rekowiki.org/w/"
+		},
+		{
 			"name": "revi.wiki",
 			"regex": "(revi\\.wiki)",
 			"articlePath": "/wiki/",
