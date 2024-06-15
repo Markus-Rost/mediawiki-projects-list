@@ -783,6 +783,13 @@
 			"fullScriptPath": "https://love2d.org/w/"
 		},
 		{
+			"name": "maplestorywiki.net",
+			"regex": "((?:www\\.)?maplestorywiki\\.net)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://www.maplestorywiki.net/"			
+		},
+		{
 			"name": "marcaargentea.net",
 			"regex": "((?:www\\.)?marcaargentea\\.net)",
 			"articlePath": "/wiki/index.php/",
