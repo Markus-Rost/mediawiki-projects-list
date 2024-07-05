@@ -18,6 +18,35 @@
 			"note": "Missing language support."
 		},
 		{
+			"name": "minceraft.wiki",
+			"regex": "(((?:[a-z-]{2,12})\\.|)minceraft\\.wiki)(?:/wiki/|/w/|/|$)",
+			"namePath": "https://$2minceraft.wiki/",
+			"articlePath": "https://$2minceraft.wiki/w/",
+			"scriptPath": "https://$2minecraft.wiki/"
+		},
+		{
+			"name": "osrs.wiki",
+			"regex": "((?:www\\.)?osrs\\.wiki)(?:/wiki/|/w/|/|$)",
+			"namePath": "https://osrs.wiki/",
+			"articlePath": "https://osrs.wiki/",
+			"scriptPath": "https://oldschool.runescape.wiki/"
+		},
+		{
+			"name": "rs.wiki",
+			"regex": "(((?:os|pt|www)\\.|)rs\\.wiki)(?:/wiki/|/w/|/|$)",
+			"namePath": "https://$2rs.wiki/",
+			"articlePath": "https://$2rs.wiki/",
+			"scriptPath": "https://$2runescape.wiki/"
+		},
+		{
+			"name": "tolkien.wiki",
+			"regex": "((?:www\\.)?tolkien\\.wiki)/?$",
+			"namePath": "https://tolkien.wiki/",
+			"articlePath": "https://tolkien.wiki/",
+			"scriptPath": "https://tolkiengateway.net/w/",
+			"relativeFix": "^/wiki(?=/)"
+		},
+		{
 			"name": "wikiless.org",
 			"regex": "(wikiless\\.org/.*?\\?(?:.*?&)?lang=([a-z\\d-]{1,50}))(?:&|/?$)",
 			"namePath": "https://wikiless.org/?lang=$2",

@@ -248,6 +248,7 @@ function inputToFrontendProxy(input) {
 function urlToFix(url) {
 	let hostname = url.split('/')[2];
 	if ( functionCache.urlToFix.has(hostname) ) return functionCache.urlToFix.get(hostname);
+	/** @type {?((href:String,pagelink:String)=>String)} */
 	let result = null;
 	let frontendProxy = getFrontendProxy(hostname);
 	if ( frontendProxy ) {
