@@ -733,7 +733,7 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://www.kidicaruswiki.org/w/"
-		}mys,
+		},
 		{
 			"name": "kontu.wiki",
 			"regex": "((?:www\\.)?kontu\\.wiki)",
