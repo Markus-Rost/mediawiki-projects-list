@@ -942,20 +942,6 @@
 			"fullScriptPath": "https://miiwiki.org/w/"
 		},
 		{
-			"name": "miki.community",
-			"regex": "((?:en\\.)?miki\\.community)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://en.miki.community/w/"
-		},
-		{
-			"name": "minecove.net",
-			"regex": "((?:www\\.)?minecove\\.net)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://minecove.net/w/"
-		},
-		{
 			"name": "minecraft.wiki",
 			"regex": "((?:([a-z-]{2,12})\\.)?minecraft\\.wiki)",
 			"articlePath": "/w/",
@@ -1045,13 +1031,6 @@
 				]
 			},
 			"wikiFarm": "mywikis"
-		},
-		{
-			"name": "newchallenger.net",
-			"regex": "((?:www\\.)?newchallenger\\.net)",
-			"articlePath": "/w/index.php?title=",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://newchallenger.net/w/"
 		},
 		{
 			"name": "niwanetwork.org",
@@ -1234,13 +1213,6 @@
 			"fullScriptPath": "https://psp2i.wiki/"
 		},
 		{
-			"name": "psu-clementine.net",
-			"regex": "((?:www\\.)?psu-clementine\\.net)",
-			"articlePath": "/wiki/index.php/",
-			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://psu-clementine.net/wiki/"
-		},
-		{
 			"name": "pzwiki.net",
 			"regex": "((?:www\\.)?pzwiki\\.net)",
 			"articlePath": "/wiki/",
@@ -1419,13 +1391,6 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://spongebobwiki.org/w/"
-		},
-		{
-			"name": "spyrowiki.com",
-			"regex": "((?:www\\.)?spyrowiki\\.com)",
-			"articlePath": "/wiki/",
-			"scriptPath": "/w/",
-			"fullScriptPath": "https://spyrowiki.com/w/"
 		},
 		{
 			"name": "ssbwiki.com",
@@ -1868,8 +1833,8 @@
 			"name": "wiki.henkaku.xyz",
 			"regex": "(wiki\\.henkaku\\.xyz)",
 			"articlePath": "/vita/",
-			"scriptPath": "/vita/",
-			"fullScriptPath": "https://wiki.henkaku.xyz/vita/"
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.henkaku.xyz/"
 		},
 		{
 			"name": "wiki.holdfastgame.com",
@@ -1898,6 +1863,13 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.kynseed.com/"
+		},
+		{
+			"name": "wiki.leagueoflegends.com",
+			"regex": "(wiki\\.leagueoflegends\\.com)",
+			"articlePath": "/en-us/",
+			"scriptPath": "/en-us/",
+			"fullScriptPath": "https://wiki.leagueoflegends.com/en-us/"
 		},
 		{
 			"name": "wiki.london2038.com",
@@ -1961,13 +1933,6 @@
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.raregamingdump.ca/"
-		},
-		{
-			"name": "wiki.rinkofhonor.com",
-			"regex": "(wiki\\.rinkofhonor\\.com)",
-			"articlePath": "/index.php/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://wiki.rinkofhonor.com/"
 		},
 		{
 			"name": "wiki.seiwanetwork.org",
