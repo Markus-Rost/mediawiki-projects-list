@@ -280,7 +280,7 @@
 			"regex": "((?:www\\.)?chibi-robo\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://chibi-robo.wiki/"
+			"fullScriptPath": "https://chibi-robo.wiki/w/"
 		},
 		{
 			"name": "chocolate-doom.org",
@@ -364,7 +364,7 @@
 			"regex": "((?:www\\.)?deadlockwiki\\.org)",
 			"articlePath": "/w/",
 			"scriptPath": "/mw/",
-			"fullScriptPath": "https://deadlockwiki.org/"
+			"fullScriptPath": "https://deadlockwiki.org/mw/"
 		},
 		{
 			"name": "destinypedia.com",
@@ -1015,10 +1015,10 @@
 		},
 		{
 			"name": "mysterydungeonwiki.com",
-			"regex": "((?:www\\.)?mysterydungeonwiki\\.com)",
+			"regex": "(mysterydungeonwiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://mysterydungeonwiki.com/"
+			"fullScriptPath": "https://mysterydungeonwiki.com/w/"
 		},
 		{
 			"name": "mywikis.eu",
