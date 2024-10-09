@@ -276,6 +276,13 @@
 			}
 		},
 		{
+			"name": "chibi-robo.wiki",
+			"regex": "((?:www\\.)?chibi-robo\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://chibi-robo.wiki/w/"
+		},
+		{
 			"name": "chocolate-doom.org",
 			"regex": "((?:www\\.)?chocolate-doom\\.org)",
 			"articlePath": "/wiki/index.php/",
@@ -351,6 +358,13 @@
 			"articlePath": "/page/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://ddowiki.com/"
+		},
+		{
+			"name": "deadlockwiki.org",
+			"regex": "((?:www\\.)?deadlockwiki\\.org)",
+			"articlePath": "/w/",
+			"scriptPath": "/mw/",
+			"fullScriptPath": "https://deadlockwiki.org/mw/"
 		},
 		{
 			"name": "destinypedia.com",
@@ -998,6 +1012,13 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
 			"fullScriptPath": "https://mutecity.org/w/"
+		},
+		{
+			"name": "mysterydungeonwiki.com",
+			"regex": "(mysterydungeonwiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://mysterydungeonwiki.com/w/"
 		},
 		{
 			"name": "mywikis.eu",
@@ -1992,6 +2013,13 @@
 			"articlePath": "/index.php?title=",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.twcenter.net/"
+		},
+		{
+			"name": "wiki.vrchat.com",
+			"regex": "(wiki\\.vrchat\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.vrchat.com/"
 		},
 		{
 			"name": "wiki.xn--rckteqa2e.com",
