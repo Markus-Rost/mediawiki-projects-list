@@ -693,13 +693,6 @@
 			"wikiFarm": "huijiwiki"
 		},
 		{
-			"name": "incels.wiki",
-			"regex": "((?:www\\.)?incels\\.wiki)",
-			"articlePath": "/w/",
-			"scriptPath": "/",
-			"fullScriptPath": "https://incels.wiki/"
-		},
-		{
 			"name": "jojowiki.com",
 			"regex": "((?:www\\.)?jojowiki\\.com)",
 			"articlePath": "/",
