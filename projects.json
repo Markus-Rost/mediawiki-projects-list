@@ -190,14 +190,14 @@
 			"regex": "((?:www\\.)?banjokazooiewiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://banjokazooiewiki.com/w/"
+			"": "https://banjokazooiewiki.com/w/"
 		},
 		{
 			"name": "barotraumagame.com",
 			"regex": "((?:www\\.)?barotraumagame\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/baro-wiki/",
-			"fullScriptPath": "https://barotraumagame.com/baro-wiki/",
+			"": "https://barotraumagame.com/baro-wiki/",
 			"note": "Requires cookies to be accessed."
 		},
 		{
@@ -205,14 +205,14 @@
 			"regex": "((?:www\\.)?betawiki\\.net)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://betawiki.net/"
+			"": "https://betawiki.net/"
 		},
 		{
 			"name": "bg-wiki.com",
 			"regex": "((?:www\\.)?bg-wiki\\.com)",
 			"articlePath": "/ffxi/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.bg-wiki.com/"
+			"": "https://www.bg-wiki.com/"
 		},
 		{
 			"name": "biosector01.com",
@@ -231,14 +231,14 @@
 			"regex": "((?:www\\.)?blaseball\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.blaseball.wiki/"
+			"": "https://www.blaseball.wiki/"
 		},
 		{
 			"name": "blazblue.wiki",
 			"regex": "((?:www\\.)?blazblue\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://blazblue.wiki/",
+			"": "https://blazblue.wiki/",
 			"extensions": [
 				"Cargo"
 			]
@@ -248,7 +248,7 @@
 			"regex": "(bluearchive\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://bluearchive.wiki/w/"
+			"": "https://bluearchive.wiki/w/"
 		},
 		{
 			"name": "brickimedia.org",
@@ -280,133 +280,133 @@
 			"regex": "((?:www\\.)?chibi-robo\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://chibi-robo.wiki/w/"
+			"": "https://chibi-robo.wiki/w/"
 		},
 		{
 			"name": "chocolate-doom.org",
 			"regex": "((?:www\\.)?chocolate-doom\\.org)",
 			"articlePath": "/wiki/index.php/",
 			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://www.chocolate-doom.org/wiki/"
+			"": "https://www.chocolate-doom.org/wiki/"
 		},
 		{
 			"name": "chronistwiki.de",
 			"regex": "((?:www\\.)?chronistwiki\\.de)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://chronistwiki.de/w/"
+			"": "https://chronistwiki.de/w/"
 		},
 		{
 			"name": "chronowiki.org",
 			"regex": "((?:www\\.)?chronowiki\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://www.chronowiki.org/w/"
+			"": "https://www.chronowiki.org/w/"
 		},
 		{
 			"name": "conanpedia.com",
 			"regex": "((?:www\\.)?conanpedia\\.com)",
 			"articlePath": "/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.conanpedia.com/"
+			"": "https://www.conanpedia.com/"
 		},
 		{
 			"name": "conanwiki.org",
 			"regex": "((?:www\\.)?conanwiki\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://conanwiki.org/"
+			"": "https://conanwiki.org/"
 		},
 		{
 			"name": "confrontation.wiki",
 			"regex": "((?:www\\.)?confrontation\\.wiki)",
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://confrontation.wiki/"
+			"": "https://confrontation.wiki/"
 		},
 		{
 			"name": "conkerwiki.com",
 			"regex": "((?:www\\.)?conkerwiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://conkerwiki.com/w/"
+			"": "https://conkerwiki.com/w/"
 		},
 		{
 			"name": "consolegameswiki.com",
 			"regex": "((?:ffxiv\\.)?consolegameswiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/mediawiki/",
-			"fullScriptPath": "https://ffxiv.consolegameswiki.com/mediawiki/"
+			"": "https://ffxiv.consolegameswiki.com/mediawiki/"
 		},
 		{
 			"name": "crashbandicootwiki.com",
 			"regex": "((?:www\\.)?crashbandicootwiki\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://crashbandicootwiki.com/w/"
+			"": "https://crashbandicootwiki.com/w/"
 		},
 		{
 			"name": "dandwiki.com",
 			"regex": "((?:www\\.)?dandwiki.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://www.dandwiki.com/w/"
+			"": "https://www.dandwiki.com/w/"
 		},
 		{
 			"name": "ddowiki.com",
 			"regex": "((?:www\\.)?ddowiki\\.com)",
 			"articlePath": "/page/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://ddowiki.com/"
+			"": "https://ddowiki.com/"
 		},
 		{
 			"name": "deadlockwiki.org",
 			"regex": "((?:www\\.)?deadlockwiki\\.org)",
 			"articlePath": "/w/",
 			"scriptPath": "/mw/",
-			"fullScriptPath": "https://deadlockwiki.org/mw/"
+			"": "https://deadlockwiki.org/mw/"
 		},
 		{
 			"name": "destinypedia.com",
 			"regex": "((?:www\\.)?destinypedia\\.com)",
 			"articlePath": "/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.destinypedia.com/"
+			"": "https://www.destinypedia.com/"
 		},
 		{
 			"name": "detectiveconanworld.com",
 			"regex": "((?:www\\.)?detectiveconanworld\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/wiki/",
-			"fullScriptPath": "https://www.detectiveconanworld.com/wiki/"
+			"": "https://www.detectiveconanworld.com/wiki/"
 		},
 		{
 			"name": "developer.valvesoftware.com",
 			"regex": "(developer\\.valvesoftware\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://developer.valvesoftware.com/w/"
+			"": "https://developer.valvesoftware.com/w/"
 		},
 		{
 			"name": "dmowiki.com",
 			"regex": "((?:www\\.)?dmowiki\\.com)",
 			"articlePath": "/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://dmowiki.com/"
+			"": "https://dmowiki.com/"
 		},
 		{
 			"name": "dnd-wiki.org",
 			"regex": "(dnd-wiki\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://dnd-wiki.org/w/"
+			"": "https://dnd-wiki.org/w/"
 		},
 		{
 			"name": "dragalialost.wiki",
 			"regex": "((?:www\\.)?dragalialost\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://dragalialost.wiki/",
+			"": "https://dragalialost.wiki/",
 			"extensions": [
 				"Cargo"
 			]
@@ -416,7 +416,7 @@
 			"regex": "(dragdown\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://dragdown.wiki/w/",
+			"": "https://dragdown.wiki/w/",
 			"wikiFarm": "miraheze",
 			"extensions": [
 				"CentralAuth",
@@ -428,28 +428,28 @@
 			"regex": "((?:www\\.)?dragon-mania-legends\\.wiki)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://www.dragon-mania-legends.wiki/w/"
+			"": "https://www.dragon-mania-legends.wiki/w/"
 		},
 		{
 			"name": "dragon-quest.org",
 			"regex": "((?:www\\.)?dragon-quest\\.org)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://dragon-quest.org/w/"
+			"": "https://dragon-quest.org/w/"
 		},
 		{
 			"name": "drawntolife.wiki",
 			"regex": "((?:www\\.)?drawntolife\\.wiki)",
 			"articlePath": "/en/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://drawntolife.wiki/w/"
+			"": "https://drawntolife.wiki/w/"
 		},
 		{
 			"name": "dreamcancel.com",
 			"regex": "((?:www\\.)?dreamcancel\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://dreamcancel.com/w/",
+			"": "https://dreamcancel.com/w/",
 			"extensions": [
 				"Cargo"
 			]
@@ -1702,7 +1702,8 @@
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
-			]
+			],
+			"fullScriptPath": "https://wiki.animalroyale.com/w/"
 		},
 		{
 			"name": "wiki.arcaea.cn",
