@@ -1698,12 +1698,12 @@
 			"regex": "(wiki\\.animalroyale\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
+			"fullScriptPath": "https://wiki.animalroyale.com/w/",
 			"wikiFarm": "miraheze",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
-			],
-			"fullScriptPath": "https://wiki.animalroyale.com/w/"
+			]
 		},
 		{
 			"name": "wiki.arcaea.cn",
