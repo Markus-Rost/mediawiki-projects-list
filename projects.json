@@ -1694,6 +1694,18 @@
 			"fullScriptPath": "https://wiki.albiononline.com/"
 		},
 		{
+			"name": "wiki.animalroyale.com",
+			"regex": "(wiki\\.animalroyale\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://wiki.animalroyale.com/w/",
+			"wikiFarm": "miraheze",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "wiki.arcaea.cn",
 			"regex": "(wiki\\.arcaea\\.cn)",
 			"articlePath": "/",
