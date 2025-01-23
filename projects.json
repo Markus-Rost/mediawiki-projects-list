@@ -1702,7 +1702,8 @@
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
-			]
+			],
+			"fullScriptPath": "https://wiki.animalroyale.com/w/"
 		},
 		{
 			"name": "wiki.arcaea.cn",
