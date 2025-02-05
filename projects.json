@@ -993,6 +993,13 @@
 			"fullScriptPath": "https://mutecity.org/w/"
 		},
 		{
+			"name": "mtg.wiki",
+			"regex": "((?:www\\.)?mtg\\.wiki)",
+			"articlePath": "/page/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://mtg.wiki/"
+		},
+		{
 			"name": "mysterydungeonwiki.com",
 			"regex": "(mysterydungeonwiki\\.com)",
 			"articlePath": "/wiki/",
@@ -1874,7 +1881,10 @@
 			"regex": "(wiki\\.leagueoflegends\\.com)",
 			"articlePath": "/en-us/",
 			"scriptPath": "/en-us/",
-			"fullScriptPath": "https://wiki.leagueoflegends.com/en-us/"
+			"fullScriptPath": "https://wiki.leagueoflegends.com/en-us/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "wiki.london2038.com",
@@ -1990,6 +2000,16 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.vrchat.com/"
+		},
+		{
+			"name": "wiki.warframe.com",
+			"regex": "(wiki\\.warframe\\.com)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.warframe.com/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "wiki.xn--rckteqa2e.com",
@@ -2137,6 +2157,23 @@
 				]
 			},
 			"wikiFarm": "wikimedia",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
+			"name": "wikioasis.org",
+			"regex": "(([a-z\\d-]{1,50})\\.wikioasis\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.wikioasis.org/"
+				]
+			},
+			"wikiFarm": "wikioasis",
 			"extensions": [
 				"CentralAuth",
 				"OAuth"
