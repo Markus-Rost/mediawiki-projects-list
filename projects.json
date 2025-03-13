@@ -1305,11 +1305,11 @@
 		},
 		{
 			"name": "runescape.wiki",
-			"regex": "((?:(classic|oldschool|pt|www)\\.)?runescape\\.wiki)",
+			"regex": "((?:(meta|classic|oldschool|pt|www)\\.)?runescape\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
 			"idString": {
-				"regex": "(classic|oldschool|pt|www)",
+				"regex": "(meta|classic|oldschool|pt|www)",
 				"scriptPaths": [
 					"https://$1.runescape.wiki/"
 				]
@@ -1603,6 +1603,16 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/mediawiki/",
 			"fullScriptPath": "https://ukikipedia.net/mediawiki/"
+		},
+		{
+			"name": "vampire.survivors.wiki",
+			"regex": "(vampire\\.survivors\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://vampire.survivors.wiki/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "vetpetmon.com",
