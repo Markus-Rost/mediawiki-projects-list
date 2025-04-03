@@ -367,6 +367,17 @@
 			"fullScriptPath": "https://deadlockwiki.org/mw/"
 		},
 		{
+			"name": "deltarune.wiki",
+			"regex": "(deltarune\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://deltarune.wiki/",
+			"wikiFarm": "undertale",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "destinypedia.com",
 			"regex": "((?:www\\.)?destinypedia\\.com)",
 			"articlePath": "/",
@@ -1603,6 +1614,17 @@
 			"articlePath": "/wiki/",
 			"scriptPath": "/mediawiki/",
 			"fullScriptPath": "https://ukikipedia.net/mediawiki/"
+		},
+		{
+			"name": "undertale.wiki",
+			"regex": "(undertale\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://undertale.wiki/",
+			"wikiFarm": "undertale",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "vampire.survivors.wiki",

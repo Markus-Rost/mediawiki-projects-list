@@ -9,6 +9,7 @@ declare module 'mediawiki-projects-list' {
 		"mywikis" | 
 		"shoutwiki" | 
 		"telepedia" | 
+		"undertale" | 
 		"wiki.gg" | 
 		"wikimedia" | 
 		"wikioasis" | 
