@@ -1382,6 +1382,23 @@
 			"fullScriptPath": "https://www.sindenwiki.org/"
 		},
 		{
+			"name": "skywiki.org",
+			"regex": "(([a-z\\d-]{1,50})\\.skywiki\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.skywiki.org/"
+				]
+			},
+			"wikiFarm": "skywiki",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "splatoonwiki.org",
 			"regex": "((?:(es|fr|www)\\.)?splatoonwiki\\.org)",
 			"articlePath": "/wiki/",

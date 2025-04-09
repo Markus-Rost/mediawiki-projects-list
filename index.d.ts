@@ -8,6 +8,7 @@ declare module 'mediawiki-projects-list' {
 		"miraheze" | 
 		"mywikis" | 
 		"shoutwiki" | 
+		"skywiki" | 
 		"telepedia" | 
 		"undertale" | 
 		"wiki.gg" | 

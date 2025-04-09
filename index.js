@@ -3,7 +3,7 @@ const PROJECTS = require('./projects.json');
 
 /**
  * A wiki farm
- * @typedef {"biligame"|"fandom"|"huijiwiki"|"miraheze"|"mywikis"|"shoutwiki"|"telepedia"|"undertale"|"wiki.gg"|"wikimedia"|"wikioasis"|null} WikiFarm
+ * @typedef {"biligame"|"fandom"|"huijiwiki"|"miraheze"|"mywikis"|"shoutwiki"|"skywiki"|"telepedia"|"undertale"|"wiki.gg"|"wikimedia"|"wikioasis"|null} WikiFarm
  */
 
 /**
