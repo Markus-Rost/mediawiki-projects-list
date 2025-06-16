@@ -18,6 +18,13 @@
 			"note": "Missing language support."
 		},
 		{
+			"name": "mc.wiki",
+			"regex": "(((?:[a-z-]{2,12})\\.|)mc\\.wiki)(?:/wiki/|/w/|/|$)",
+			"namePath": "https://$2mc.wiki/",
+			"articlePath": "https://$2mc.wiki/",
+			"scriptPath": "https://$2minecraft.wiki/"
+		},
+		{
 			"name": "minceraft.wiki",
 			"regex": "(((?:[a-z-]{2,12})\\.|)minceraft\\.wiki)(?:/wiki/|/w/|/|$)",
 			"namePath": "https://$2minceraft.wiki/",
