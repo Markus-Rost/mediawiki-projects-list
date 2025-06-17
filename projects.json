@@ -181,6 +181,16 @@
 			"fullScriptPath": "https://bakugan.wiki/"
 		},
 		{
+			"name": "balatrowiki.org",
+			"regex": "(balatrowiki\\.org)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://balatrowiki.org/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "banglapedia.org",
 			"regex": "((en|bn)\\.banglapedia\\.org)",
 			"articlePath": "/index.php/",
