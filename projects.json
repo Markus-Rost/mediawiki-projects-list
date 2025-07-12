@@ -1768,10 +1768,15 @@
 		},
 		{
 			"name": "wiki.animalroyale.com",
-			"regex": "(wiki\\.animalroyale\\.com)",
+			"regex": "((?:([a-z-]{2,12})\\.)?wiki\\.animalroyale\\.com)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/w/",
-			"fullScriptPath": "https://wiki.animalroyale.com/w/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.wiki.animalroyale.com/"
+				]
+			}
 			"wikiFarm": "miraheze",
 			"extensions": [
 				"CentralAuth",
