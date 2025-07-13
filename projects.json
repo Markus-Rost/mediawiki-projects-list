@@ -385,10 +385,15 @@
 		},
 		{
 			"name": "deltarune.wiki",
-			"regex": "(deltarune\\.wiki)",
+			"regex": "((?:([a-z-]{2,12})\\.)?deltarune\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://deltarune.wiki/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.deltarune.wiki/"
+				]
+			},
 			"wikiFarm": "undertale",
 			"extensions": [
 				"OAuth"
@@ -1651,10 +1656,15 @@
 		},
 		{
 			"name": "undertale.wiki",
-			"regex": "(undertale\\.wiki)",
+			"regex": "((?:([a-z-]{2,12})\\.)?undertale\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://undertale.wiki/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.undertale.wiki/"
+				]
+			},
 			"wikiFarm": "undertale",
 			"extensions": [
 				"OAuth"
