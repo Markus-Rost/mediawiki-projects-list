@@ -1774,7 +1774,7 @@
 			"idString": {
 				"regex": "([a-z-]{2,12})",
 				"scriptPaths": [
-					"https://$1.wiki.animalroyale.com/"
+					"https://$1.wiki.animalroyale.com/w/"
 				]
 			}
 			"wikiFarm": "miraheze",
