@@ -2211,6 +2211,18 @@
 			]
 		},
 		{
+			"name": "wikifunctions.org",
+			"regex": "((?:www\\.)?wikifunctions\\.org)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://www.wikifunctions.org/w/",
+			"wikiFarm": "wikimedia",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "wikihow.com",
 			"regex": "((?:www\\.)?wikihow\\.com)",
 			"articlePath": "/",
