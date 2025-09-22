@@ -591,7 +591,10 @@
 			"regex": "((?:www\\.)?femiwiki\\.com)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://femiwiki.com/"
+			"fullScriptPath": "https://femiwiki.com/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "finalfantasywiki.com",
@@ -713,6 +716,16 @@
 			"fullScriptPath": "https://hollowknight.wiki/mw/"
 		},
 		{
+			"name": "hoto.wiki",
+			"regex": "(hoto\\.wiki)",
+			"articlePath": "/wiki",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://hoto.wiki/w/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "huijiwiki.com",
 			"regex": "((?:([a-z\\d-]{1,50})\\.)?huijiwiki\\.com)",
 			"articlePath": "/wiki/",
@@ -815,7 +828,10 @@
 			"regex": "(librewiki\\.net)",
 			"articlePath": "/wiki/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://librewiki.net/"
+			"fullScriptPath": "https://librewiki.net/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "liquipedia.net",
@@ -2448,6 +2464,13 @@
 			"extensions": [
 				"Cargo"
 			]
+		},
+		{
+			"name": "zetawiki.com",
+			"regex": "(zetawiki\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://zetawiki.com/w/"
 		}
 	]
 }
