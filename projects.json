@@ -884,10 +884,15 @@
 		},
 		{
 			"name": "maplestorywiki.net",
-			"regex": "((?:www\\.)?maplestorywiki\\.net)",
+			"regex": "((?:(www|classic|idle)\\.)?maplestorywiki\\.net)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://www.maplestorywiki.net/"			
+			"idString": {
+				"regex": "(www|classic|idle)",
+				"scriptPaths": [
+					"https://$1.maplestorywiki.net/"
+				]
+			},
 		},
 		{
 			"name": "marcaargentea.net",
