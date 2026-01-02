@@ -739,6 +739,21 @@
 			"wikiFarm": "huijiwiki"
 		},
 		{
+			"name": "hytalewiki.org",
+			"regex": "((?:([a-z-]{2,12})\\.)?hytalewiki\\.org)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.hytalewiki.org/"
+				]
+			},
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "jojowiki.com",
 			"regex": "((?:www\\.)?jojowiki\\.com)",
 			"articlePath": "/",
@@ -1572,7 +1587,6 @@
 			},
 			"wikiFarm": "telepedia",
 			"extensions": [
-				"CentralAuth",
 				"OAuth"
 			]
 		},
@@ -2026,6 +2040,16 @@
 			"fullScriptPath": "https://wiki.pioneer2.net/"
 		},
 		{
+			"name": "wiki.play2xko.com",
+			"regex": "(wiki\\.play2xko\\.com)",
+			"articlePath": "/en-us/",
+			"scriptPath": "/en-us/",
+			"fullScriptPath": "https://wiki.play2xko.com/en-us/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "wiki.pokemoncentral.it",
 			"regex": "(wiki\\.pokemoncentral\\.it)",
 			"articlePath": "/",
@@ -2059,6 +2083,16 @@
 			"articlePath": "/index.php/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.serenesforest.net/"
+		},
+		{
+			"name": "wiki.smite2.com",
+			"regex": "(wiki\\.smite2\\.com)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://wiki.smite2.com/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "wiki.supercombo.gg",
