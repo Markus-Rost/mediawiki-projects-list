@@ -892,7 +892,7 @@
 				"scriptPaths": [
 					"https://$1.maplestorywiki.net/"
 				]
-			},
+			}
 		},
 		{
 			"name": "marcaargentea.net",
