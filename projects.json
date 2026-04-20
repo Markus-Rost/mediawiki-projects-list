@@ -356,6 +356,16 @@
 			"fullScriptPath": "https://ffxiv.consolegameswiki.com/mediawiki/"
 		},
 		{
+			"name": "cookierun.wiki",
+			"regex": "(cookierun\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/mw/",
+			"fullScriptPath": "https://cookierun.wiki/mw/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "crashbandicootwiki.com",
 			"regex": "((?:www\\.)?crashbandicootwiki\\.com)",
 			"articlePath": "/wiki/",
@@ -1005,11 +1015,11 @@
 		},
 		{
 			"name": "minecraft.wiki",
-			"regex": "((?:([a-z-]{2,12})\\.)?minecraft\\.wiki)",
+			"regex": "((?:([a-z-]{2,20})\\.)?minecraft\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
 			"idString": {
-				"regex": "([a-z-]{2,12})",
+				"regex": "([a-z-]{2,20})",
 				"scriptPaths": [
 					"https://$1.minecraft.wiki/"
 				]
