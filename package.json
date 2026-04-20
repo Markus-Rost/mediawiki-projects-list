@@ -2,7 +2,7 @@
   "name": "mediawiki-projects-list",
   "version": "4.9.8",
   "type": "commonjs",
-  "description": "List of known MediaWiki projects for use in discord-wiki-bot",
+  "description": "List of MediaWiki projects for use in discord-wiki-bot",
   "main": "index.js",
   "files": [
     "index.js",
