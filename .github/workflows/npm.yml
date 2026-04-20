@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           registry-url: 'https://registry.npmjs.org'
-      - run: npm publish
+      - run: NODE_AUTH_TOKEN="" npm publish
       - uses: actions/setup-node@v6
         with:
           registry-url: 'https://npm.pkg.github.com'
