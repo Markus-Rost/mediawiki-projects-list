@@ -2468,6 +2468,23 @@
 			"fullScriptPath": "https://wimpykidwiki.com/w/"
 		},
 		{
+			"name": "wikivy.com",
+			"regex": "(([a-z\\d-]{1,50})\\.wikivy\\.com)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"idString": {
+				"regex": "([a-z\\d-]{1,50})",
+				"scriptPaths": [
+					"https://$1.wikivy.com/w/"
+				]
+			},
+			"wikiFarm": "wikivy",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "x-journal.net",
 			"regex": "((?:www\\.)?x-journal\\.net)",
 			"articlePath": "/Wiki/index.php?title=",

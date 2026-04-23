@@ -14,6 +14,7 @@ declare module 'mediawiki-projects-list' {
 		"wiki.gg" | 
 		"wikimedia" | 
 		"wikioasis" | 
+		"wikivy" | 
 		null
 	);
 
