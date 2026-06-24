@@ -357,10 +357,15 @@
 		},
 		{
 			"name": "cookierun.wiki",
-			"regex": "(cookierun\\.wiki)",
+			"regex": "((?:([a-z-]{2,12})\\.)?cookierun\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/mw/",
-			"fullScriptPath": "https://cookierun.wiki/mw/",
+			"idString": {
+				"regex": "([a-z-]{2,12})",
+				"scriptPaths": [
+					"https://$1.deltarune.wiki/mw/"
+				]
+			},
 			"extensions": [
 				"OAuth"
 			]
@@ -670,6 +675,16 @@
 					"https://$1.grifkuba.net/w/"
 				]
 			}
+		},
+		{
+			"name": "gta.wiki",
+			"regex": "((?:www\\.)?gta\\.wiki)",
+			"articlePath": "/w/",
+			"scriptPath": "/",
+			"fullScriptPath": "https://gta.wiki/",
+			"extensions": [
+				"OAuth"
+			]
 		},
 		{
 			"name": "guildwars2.com",
@@ -2065,6 +2080,16 @@
 			]
 		},
 		{
+			"name": "wiki.playvalorant.com",
+			"regex": "(wiki\\.playvalorant\\.com)",
+			"articlePath": "/en-us/",
+			"scriptPath": "/en-us/",
+			"fullScriptPath": "https://wiki.playvalorant.com/en-us/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
 			"name": "wiki.pokemoncentral.it",
 			"regex": "(wiki\\.pokemoncentral\\.it)",
 			"articlePath": "/",
@@ -2105,6 +2130,21 @@
 			"articlePath": "/w/",
 			"scriptPath": "/",
 			"fullScriptPath": "https://wiki.smite2.com/",
+			"extensions": [
+				"OAuth"
+			]
+		},
+		{
+			"name": "wiki.subnautica.com",
+			"regex": "(wiki\\.subnautica\\.com/(sn2?))",
+			"articlePath": "/",
+			"scriptPath": "/",
+			"idString": {
+				"regex": "(sn2?)",
+				"scriptPaths": [
+					"https://wiki.subnautica.com/$1/"
+				]
+			},
 			"extensions": [
 				"OAuth"
 			]
@@ -2324,11 +2364,11 @@
 			"name": "wikioasis.org",
 			"regex": "(([a-z\\d-]{1,50})\\.wikioasis\\.org)",
 			"articlePath": "/wiki/",
-			"scriptPath": "/",
+			"scriptPath": "/w/",
 			"idString": {
 				"regex": "([a-z\\d-]{1,50})",
 				"scriptPaths": [
-					"https://$1.wikioasis.org/"
+					"https://$1.wikioasis.org/w/"
 				]
 			},
 			"wikiFarm": "wikioasis",
