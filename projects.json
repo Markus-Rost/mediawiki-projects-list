@@ -363,7 +363,7 @@
 			"idString": {
 				"regex": "([a-z-]{2,12})",
 				"scriptPaths": [
-					"https://$1.deltarune.wiki/mw/"
+					"https://$1.cookierun.wiki/mw/"
 				]
 			},
 			"extensions": [
