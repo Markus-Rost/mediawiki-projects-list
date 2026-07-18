@@ -1399,11 +1399,11 @@
 		},
 		{
 			"name": "runescape.wiki",
-			"regex": "((?:(meta|classic|oldschool|pt|www)\\.)?runescape\\.wiki)",
+			"regex": "((?:(meta|classic|oldschool|dragonwilds|pt|www)\\.)?runescape\\.wiki)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
 			"idString": {
-				"regex": "(meta|classic|oldschool|pt|www)",
+				"regex": "(meta|classic|oldschool|dragonwilds|pt|www)",
 				"scriptPaths": [
 					"https://$1.runescape.wiki/"
 				]
