@@ -2189,10 +2189,15 @@
 		},
 		{
 			"name": "wiki.warframe.com",
-			"regex": "(wiki\\.warframe\\.com)",
+			"regex": "((?:([a-z-]{2,20})\\.)?wiki\\.warframe\\.com)",
 			"articlePath": "/w/",
 			"scriptPath": "/",
-			"fullScriptPath": "https://wiki.warframe.com/",
+			"idString": {
+				"regex": "([a-z-]{2,20})",
+				"scriptPaths": [
+					"https://$1.wiki.warframe.com/"
+				]
+			},
 			"extensions": [
 				"OAuth"
 			]
