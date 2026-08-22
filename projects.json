@@ -864,6 +864,18 @@
 			}
 		},
 		{
+			"name": "lgbtqia.wiki",
+			"regex": "(lgbtqia\\.wiki)",
+			"articlePath": "/wiki/",
+			"scriptPath": "/w/",
+			"fullScriptPath": "https://lgbtqia.wiki/w/",
+			"wikiFarm": "miraheze",
+			"extensions": [
+				"CentralAuth",
+				"OAuth"
+			]
+		},
+		{
 			"name": "librewiki.net",
 			"regex": "(librewiki\\.net)",
 			"articlePath": "/wiki/",
